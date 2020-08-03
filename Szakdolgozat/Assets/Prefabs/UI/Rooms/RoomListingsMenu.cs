@@ -13,7 +13,16 @@ public class RoomListingsMenu : MonoBehaviourPunCallbacks
     private Transform content;
 
     private List<RoomListing> listings = new List<RoomListing>();
+    private RoomsCanvases roomsCanvases;
+    public override void OnJoinedRoom()
+    {
+        roomsCanvases.CurrentRoomCanvas.Show();
+    }
 
+    public void FirstInitialize(RoomsCanvases canvases)
+    {
+        roomsCanvases = canvases;
+    }
     public override void OnRoomListUpdate(List<RoomInfo> roomList)
     {
         foreach(RoomInfo info in roomList)
