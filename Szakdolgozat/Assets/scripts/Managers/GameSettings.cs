@@ -7,8 +7,8 @@ public class GameSettings : SingletonScriptableObject<MasterManager>
     [SerializeField]
     private string gameVersion = "0.0.0";
     [SerializeField]
-    private string nickName = "Default";
+    private string nickName = "Nickname" ;
 
     public string GameVersion { get => gameVersion;  }
-    public string NickName { get => nickName; }
+    public string NickName { get => nickName + Random.Range(0, 100).ToString(); }
 }

@@ -67,6 +67,7 @@
     <Compile Include="Assets\Prefabs\UI\Rooms\CreateOrJoinRoomCanvas.cs" />
     <Compile Include="Assets\Prefabs\UI\Rooms\CreateRoom.cs" />
     <Compile Include="Assets\Prefabs\UI\Rooms\CurrentRoomCanvas.cs" />
+    <Compile Include="Assets\Prefabs\UI\Rooms\LeaveRoomMenu.cs" />
     <Compile Include="Assets\Prefabs\UI\Rooms\PlayerListing.cs" />
     <Compile Include="Assets\Prefabs\UI\Rooms\PlayerListingsMenu.cs" />
     <Compile Include="Assets\Prefabs\UI\Rooms\RoomListing.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Assets\scripts\Managers\SingletonScriptableObject.cs" />
     <Compile Include="Assets\scripts\SingletonReferences.cs" />
     <Compile Include="Assets\scripts\test.cs" />
+    <Compile Include="Assets\scripts\Utilities\ExtTransforms.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\Photon\PhotonLibs\changes-library.txt" />

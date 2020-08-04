@@ -5,6 +5,7 @@ ScriptsOnlyBuild:
     - CreateRoom
     - CurrentRoomCanvas
     - GameSettings
+    - LeaveRoomMenu
     - MasterManager
     - PlayerListing
     - PlayerListingsMenu
@@ -197,6 +198,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11802}
     - Class: 114
       Script: {instanceID: 11820}
+    - Class: 114
+      Script: {instanceID: 14334}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -990,7 +993,7 @@ ScriptsOnlyBuild:
     className: LobbyMainPanel
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: a5a5cf5a89cd97f666e31336f3bbd04f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CurrentRoomCanvas
@@ -1516,6 +1519,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LeaveRoomMenu
   platform: 5
   scenePathNames:
   - Assets/Scenes/Rooms.unity

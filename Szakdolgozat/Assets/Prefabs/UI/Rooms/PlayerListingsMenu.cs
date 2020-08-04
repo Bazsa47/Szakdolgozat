@@ -12,13 +12,14 @@ public class PlayerListingsMenu : MonoBehaviourPunCallbacks
     [SerializeField]
     private Transform content;
 
+    private RoomsCanvases roomsCanvases;
     private List<PlayerListing> listings = new List<PlayerListing>();
 
-    private void Awake()
+    public void Firstinitialize(RoomsCanvases canvases)
     {
-        GetCurrentRoomPlayers();
-
+        roomsCanvases = canvases;
     }
+
     private void GetCurrentRoomPlayers()
     {
         foreach(KeyValuePair<int,Player> playerInfo in PhotonNetwork.CurrentRoom.Players)
@@ -28,15 +29,38 @@ public class PlayerListingsMenu : MonoBehaviourPunCallbacks
         
     }
 
+    public override void OnEnable()
+    {
+        base.OnEnable();
+        GetCurrentRoomPlayers();
+    }
+
+    public override void OnDisable()
+    {
+        for (int i = 0; i < listings.Count; i++)
+        {
+            Destroy(listings[i].gameObject);
+        }
+        listings.Clear();
+    }
 
     private void AddPlayerListing(Player player)
     {
-        PlayerListing listing = Instantiate(playerListing, content);
-        if (listing != null)
+        int index = listings.FindIndex(x => x.Player == player);
+        if(index != -1)
         {
-            listing.SetPlayerInfo(player);
-            listings.Add(listing);
+            listings[index].SetPlayerInfo(player);
         }
+        else
+        {
+            PlayerListing listing = Instantiate(playerListing, content);
+            if (listing != null)
+            {
+                listing.SetPlayerInfo(player);
+                listings.Add(listing);
+            }
+        }
+       
     }
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
@@ -51,5 +75,6 @@ public class PlayerListingsMenu : MonoBehaviourPunCallbacks
             Destroy(listings[index].gameObject);
             listings.RemoveAt(index);
         }
+   
     } 
 }
