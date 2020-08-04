@@ -22,6 +22,7 @@ public class PlayerListingsMenu : MonoBehaviourPunCallbacks
 
     private void GetCurrentRoomPlayers()
     {
+        if (!PhotonNetwork.IsConnected || PhotonNetwork.CurrentRoom == null || PhotonNetwork.CurrentRoom.Players == null) return;
         foreach(KeyValuePair<int,Player> playerInfo in PhotonNetwork.CurrentRoom.Players)
         {
             AddPlayerListing(playerInfo.Value);
@@ -37,7 +38,7 @@ public class PlayerListingsMenu : MonoBehaviourPunCallbacks
 
     public override void OnDisable()
     {
-        for (int i = 0; i < listings.Count; i++)
+        for (int i = 0; i < listings.Count; i++) 
         {
             Destroy(listings[i].gameObject);
         }
@@ -77,4 +78,15 @@ public class PlayerListingsMenu : MonoBehaviourPunCallbacks
         }
    
     } 
+
+    public void OnClick_StartGame()
+    {
+        if(PhotonNetwork.IsMasterClient)
+        {
+            PhotonNetwork.LoadLevel(1);
+            PhotonNetwork.CurrentRoom.IsOpen = false;
+            PhotonNetwork.CurrentRoom.IsVisible = false;
+        }
+
+    }
 }
