@@ -5,14 +5,17 @@ ScriptsOnlyBuild:
     - CreateRoom
     - CurrentRoomCanvas
     - GameSettings
+    - GameSetup
     - LeaveRoomMenu
     - MasterManager
+    - PhotonPlayer
     - PlayerListing
     - PlayerListingsMenu
     - RoomListing
     - RoomListingsMenu
     - RoomsCanvases
     - SingletonReferences
+    - SpawnPlayers
     - test
     PhotonUnityNetworking.Demos.dll:
     - Photon.Pun.Demo.Asteroids.Asteroid
@@ -68,13 +71,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
     - Class: 28
-      Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
@@ -84,7 +81,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
-    - Class: 136
+    - Class: 114
+      Script: {instanceID: 14378}
+    - Class: 114
+      Script: {instanceID: 15168}
+    - Class: 115
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -229,6 +230,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11806}
     - Class: 114
       Script: {instanceID: 11824}
+    - Class: 114
+      Script: {instanceID: 14346}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1554,6 +1557,24 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 72e7ff3fee0dfef0fafec64a24015b94
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PhotonPlayer
+  - hash:
+      serializedVersion: 2
+      Hash: ec9cfd716e8b048ce509c8dd26bd2705
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameSetup
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SpawnPlayers
   platform: 5
   scenePathNames:
   - Assets/Scenes/Rooms.unity
