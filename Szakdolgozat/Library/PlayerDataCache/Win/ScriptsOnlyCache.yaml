@@ -17,6 +17,7 @@ ScriptsOnlyBuild:
     - SetPlayerName
     - SingletonReferences
     - SpawnPlayers
+    - collisintestscript
     - test
     PhotonUnityNetworking.Demos.dll:
     - Photon.Pun.Demo.Asteroids.Asteroid
@@ -72,9 +73,17 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
     - Class: 28
       Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
     - Class: 48
+      Script: {instanceID: 0}
+    - Class: 65
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -86,6 +95,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 10050}
     - Class: 114
       Script: {instanceID: 10678}
+    - Class: 114
+      Script: {instanceID: 10690}
+    - Class: 114
+      Script: {instanceID: 11698}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -188,53 +201,55 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10926}
     - Class: 114
-      Script: {instanceID: 11004}
+      Script: {instanceID: 10942}
     - Class: 114
-      Script: {instanceID: 11012}
+      Script: {instanceID: 11006}
     - Class: 114
-      Script: {instanceID: 11034}
+      Script: {instanceID: 11014}
     - Class: 114
-      Script: {instanceID: 11048}
+      Script: {instanceID: 11036}
     - Class: 114
-      Script: {instanceID: 11060}
+      Script: {instanceID: 11050}
     - Class: 114
-      Script: {instanceID: 11076}
+      Script: {instanceID: 11062}
     - Class: 114
-      Script: {instanceID: 11212}
+      Script: {instanceID: 11078}
     - Class: 114
-      Script: {instanceID: 11220}
+      Script: {instanceID: 11214}
     - Class: 114
-      Script: {instanceID: 11226}
+      Script: {instanceID: 11222}
     - Class: 114
-      Script: {instanceID: 11250}
+      Script: {instanceID: 11228}
     - Class: 114
       Script: {instanceID: 11252}
     - Class: 114
-      Script: {instanceID: 11278}
+      Script: {instanceID: 11254}
     - Class: 114
-      Script: {instanceID: 11284}
+      Script: {instanceID: 11280}
     - Class: 114
-      Script: {instanceID: 11352}
+      Script: {instanceID: 11286}
     - Class: 114
-      Script: {instanceID: 11506}
+      Script: {instanceID: 11354}
     - Class: 114
-      Script: {instanceID: 11526}
+      Script: {instanceID: 11508}
     - Class: 114
-      Script: {instanceID: 11662}
+      Script: {instanceID: 11528}
     - Class: 114
-      Script: {instanceID: 11696}
+      Script: {instanceID: 11664}
     - Class: 114
-      Script: {instanceID: 11770}
+      Script: {instanceID: 11698}
     - Class: 114
-      Script: {instanceID: 11774}
+      Script: {instanceID: 11772}
     - Class: 114
-      Script: {instanceID: 11804}
+      Script: {instanceID: 11776}
     - Class: 114
-      Script: {instanceID: 11812}
+      Script: {instanceID: 11806}
     - Class: 114
-      Script: {instanceID: 11830}
+      Script: {instanceID: 11814}
     - Class: 114
-      Script: {instanceID: 14514}
+      Script: {instanceID: 11832}
+    - Class: 114
+      Script: {instanceID: 20920}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1004,6 +1019,12 @@ ScriptsOnlyBuild:
     className: PlayerUI
   - hash:
       serializedVersion: 2
+      Hash: 66a76f1929412104f1d31bc9e2a6ff5c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SetPlayerName
+  - hash:
+      serializedVersion: 2
       Hash: 3dbccc5793489caad80e37a33f1d2d30
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit.Forms
@@ -1580,10 +1601,10 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 66a76f1929412104f1d31bc9e2a6ff5c
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: SetPlayerName
+    className: collisintestscript
   platform: 5
   scenePathNames:
   - Assets/Scenes/Rooms.unity
