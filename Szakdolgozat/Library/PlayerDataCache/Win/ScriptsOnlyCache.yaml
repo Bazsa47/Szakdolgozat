@@ -8,9 +8,11 @@ ScriptsOnlyBuild:
     - GameSetup
     - LeaveRoomMenu
     - MasterManager
+    - PUN2_RigidbodySync
     - PhotonPlayer
     - PlayerListing
     - PlayerListingsMenu
+    - Pun2Player
     - RoomListing
     - RoomListingsMenu
     - RoomsCanvases
@@ -18,6 +20,7 @@ ScriptsOnlyBuild:
     - SingletonReferences
     - SpawnPlayers
     - collisintestscript
+    - player_movement
     - test
     PhotonUnityNetworking.Demos.dll:
     - Photon.Pun.Demo.Asteroids.Asteroid
@@ -69,8 +72,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 4
       Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
     - Class: 23
@@ -83,9 +84,9 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 65
+    - Class: 54
       Script: {instanceID: 0}
-    - Class: 81
+    - Class: 65
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -94,11 +95,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10050}
     - Class: 114
-      Script: {instanceID: 10678}
+      Script: {instanceID: 10680}
     - Class: 114
-      Script: {instanceID: 10690}
+      Script: {instanceID: 10692}
     - Class: 114
-      Script: {instanceID: 11698}
+      Script: {instanceID: 11700}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -171,85 +172,93 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10302}
     - Class: 114
-      Script: {instanceID: 10378}
+      Script: {instanceID: 10334}
     - Class: 114
-      Script: {instanceID: 10392}
+      Script: {instanceID: 10380}
     - Class: 114
-      Script: {instanceID: 10410}
+      Script: {instanceID: 10394}
     - Class: 114
-      Script: {instanceID: 10426}
+      Script: {instanceID: 10412}
     - Class: 114
-      Script: {instanceID: 10448}
+      Script: {instanceID: 10428}
     - Class: 114
-      Script: {instanceID: 10564}
+      Script: {instanceID: 10450}
     - Class: 114
       Script: {instanceID: 10566}
     - Class: 114
-      Script: {instanceID: 10580}
+      Script: {instanceID: 10568}
     - Class: 114
-      Script: {instanceID: 10630}
+      Script: {instanceID: 10582}
     - Class: 114
-      Script: {instanceID: 10690}
+      Script: {instanceID: 10632}
     - Class: 114
-      Script: {instanceID: 10806}
+      Script: {instanceID: 10692}
     - Class: 114
-      Script: {instanceID: 10828}
+      Script: {instanceID: 10808}
     - Class: 114
-      Script: {instanceID: 10858}
+      Script: {instanceID: 10830}
     - Class: 114
-      Script: {instanceID: 10914}
+      Script: {instanceID: 10860}
     - Class: 114
-      Script: {instanceID: 10926}
+      Script: {instanceID: 10916}
     - Class: 114
-      Script: {instanceID: 10942}
+      Script: {instanceID: 10928}
     - Class: 114
-      Script: {instanceID: 11006}
+      Script: {instanceID: 10944}
     - Class: 114
-      Script: {instanceID: 11014}
+      Script: {instanceID: 11008}
     - Class: 114
-      Script: {instanceID: 11036}
+      Script: {instanceID: 11016}
     - Class: 114
-      Script: {instanceID: 11050}
+      Script: {instanceID: 11038}
     - Class: 114
-      Script: {instanceID: 11062}
+      Script: {instanceID: 11052}
     - Class: 114
-      Script: {instanceID: 11078}
+      Script: {instanceID: 11064}
     - Class: 114
-      Script: {instanceID: 11214}
+      Script: {instanceID: 11080}
     - Class: 114
-      Script: {instanceID: 11222}
+      Script: {instanceID: 11216}
     - Class: 114
-      Script: {instanceID: 11228}
+      Script: {instanceID: 11224}
     - Class: 114
-      Script: {instanceID: 11252}
+      Script: {instanceID: 11230}
     - Class: 114
       Script: {instanceID: 11254}
     - Class: 114
-      Script: {instanceID: 11280}
+      Script: {instanceID: 11256}
     - Class: 114
-      Script: {instanceID: 11286}
+      Script: {instanceID: 11282}
     - Class: 114
-      Script: {instanceID: 11354}
+      Script: {instanceID: 11288}
     - Class: 114
-      Script: {instanceID: 11508}
+      Script: {instanceID: 11356}
     - Class: 114
-      Script: {instanceID: 11528}
+      Script: {instanceID: 11510}
     - Class: 114
-      Script: {instanceID: 11664}
+      Script: {instanceID: 11530}
     - Class: 114
-      Script: {instanceID: 11698}
+      Script: {instanceID: 11666}
     - Class: 114
-      Script: {instanceID: 11772}
+      Script: {instanceID: 11700}
     - Class: 114
-      Script: {instanceID: 11776}
+      Script: {instanceID: 11774}
     - Class: 114
-      Script: {instanceID: 11806}
+      Script: {instanceID: 11778}
     - Class: 114
-      Script: {instanceID: 11814}
+      Script: {instanceID: 11808}
     - Class: 114
-      Script: {instanceID: 11832}
+      Script: {instanceID: 11816}
     - Class: 114
-      Script: {instanceID: 20920}
+      Script: {instanceID: 11834}
+    - Class: 114
+      Script: {instanceID: 14486}
+    - Class: 114
+      Script: {instanceID: 40090}
+    - Class: 114
+      Script: {instanceID: 80084}
+    - Class: 114
+      Script: {instanceID: 82500}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -669,6 +678,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
     className: OnClickRpc
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: collisintestscript
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1601,10 +1616,22 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
+      Hash: 82a3e78aee60460c3b58d6f15b02f0a0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: player_movement
+  - hash:
+      serializedVersion: 2
+      Hash: 9ecf0891a8fd1a7bd6cfeb955f3372f8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Pun2Player
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: collisintestscript
+    className: PUN2_RigidbodySync
   platform: 5
   scenePathNames:
   - Assets/Scenes/Rooms.unity
