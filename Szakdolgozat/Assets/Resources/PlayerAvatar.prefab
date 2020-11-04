@@ -223,7 +223,7 @@ CharacterController:
   m_GameObject: {fileID: 5683830489930144498}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Height: 2
   m_Radius: 0.5
@@ -247,7 +247,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 2
+  m_CollisionDetection: 3
 --- !u!114 &7229673722566777777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,8 +260,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8ac5278317648949b1820bbf0f22578, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 3821605043903354546}
   speed: 6
+  rb: {fileID: 8225801795057627116}
 --- !u!114 &5482967136420750375
 MonoBehaviour:
   m_ObjectHideFlags: 0
