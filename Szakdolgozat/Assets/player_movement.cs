@@ -6,13 +6,13 @@ using UnityEngine;
 public class player_movement : MonoBehaviour
 {
 
-    //public CharacterController controller;
+    public CharacterController controller;
     public float speed = 6;
     PhotonView PV;
     PhotonRigidbodyView pvr;
     float smooth = 0.1f;
     float smoothvelocity = 1;
-    public Rigidbody rb;
+
     //public Transform cam;
     void Start()
     {
@@ -34,12 +34,11 @@ public class player_movement : MonoBehaviour
                 //transform.rotation = Quaternion.EulerAngles(0f, angle, 0f);
 
                 //Vector3 moveDir = Quaternion.Euler(0f,targetAngle,0f) * Vector3.forward;
-                // controller.Move(dir.normalized /*moveDir.normalized*/ * speed * Time.deltaTime);
-                rb.position = new Vector3(rb.position.x + horizontal, rb.position.y, rb.position.z + vertical);
+                controller.Move(dir.normalized /*moveDir.normalized*/ * speed * Time.deltaTime);
             }
             else
             {
-                //controller.Move(Vector3.zero.normalized * speed * Time.deltaTime);
+                controller.Move(Vector3.zero.normalized * speed * Time.deltaTime);
             }
 
 
