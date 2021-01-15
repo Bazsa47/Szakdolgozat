@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 66032682}
   - component: {fileID: 66032681}
   - component: {fileID: 66032680}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ GameObject:
   m_Component:
   - component: {fileID: 75462404}
   - component: {fileID: 75462405}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -315,7 +315,7 @@ GameObject:
   - component: {fileID: 78927102}
   - component: {fileID: 78927101}
   - component: {fileID: 78927100}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -498,7 +498,7 @@ GameObject:
   - component: {fileID: 214091319}
   - component: {fileID: 214091318}
   - component: {fileID: 214091317}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -587,7 +587,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 226667920}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Nexus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -601,8 +601,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 226667919}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.26090553, y: -2.9675016, z: 57.437756}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.76672804, y: -2.9675016, z: 57.437756}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1042748744}
@@ -612,8 +612,9 @@ Transform:
   - {fileID: 75462404}
   - {fileID: 1051144645}
   - {fileID: 1882025744}
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  - {fileID: 1783585674}
+  m_Father: {fileID: 1043961567}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &474885109
 GameObject:
@@ -718,7 +719,7 @@ GameObject:
   - component: {fileID: 567782500}
   - component: {fileID: 567782499}
   - component: {fileID: 567782498}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -840,7 +841,7 @@ GameObject:
   - component: {fileID: 720805258}
   - component: {fileID: 720805257}
   - component: {fileID: 720805256}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -932,7 +933,7 @@ GameObject:
   - component: {fileID: 755534846}
   - component: {fileID: 755534845}
   - component: {fileID: 755534844}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1054,7 +1055,7 @@ GameObject:
   - component: {fileID: 1042748747}
   - component: {fileID: 1042748746}
   - component: {fileID: 1042748745}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1143,7 +1144,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1043961567}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Arena
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1172,6 +1173,7 @@ Transform:
   - {fileID: 1901599527}
   - {fileID: 2065208992}
   - {fileID: 1645027129}
+  - {fileID: 226667920}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1185,7 +1187,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1051144645}
   - component: {fileID: 1051144646}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1281,7 +1283,7 @@ GameObject:
   - component: {fileID: 1320188547}
   - component: {fileID: 1320188546}
   - component: {fileID: 1320188548}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1460,7 +1462,7 @@ GameObject:
   - component: {fileID: 1373106927}
   - component: {fileID: 1373106926}
   - component: {fileID: 1373106925}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1552,7 +1554,7 @@ GameObject:
   - component: {fileID: 1449929905}
   - component: {fileID: 1449929904}
   - component: {fileID: 1449929903}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1644,7 +1646,7 @@ GameObject:
   - component: {fileID: 1570618906}
   - component: {fileID: 1570618905}
   - component: {fileID: 1570618904}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1736,7 +1738,7 @@ GameObject:
   - component: {fileID: 1645027132}
   - component: {fileID: 1645027131}
   - component: {fileID: 1645027130}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1828,7 +1830,7 @@ GameObject:
   - component: {fileID: 1760261089}
   - component: {fileID: 1760261088}
   - component: {fileID: 1760261087}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1918,7 +1920,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1783585674}
   - component: {fileID: 1783585673}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Directional Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1992,12 +1994,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1783585672}
-  m_LocalRotation: {x: 0, y: 0.9063079, z: -0.42261827, w: 0}
-  m_LocalPosition: {x: 0, y: 7.54, z: -5.41}
+  m_LocalRotation: {x: -0, y: 0.9063079, z: -0.42261827, w: 0}
+  m_LocalPosition: {x: -0.26090553, y: 10.507502, z: -62.847755}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 226667920}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 50, y: 180, z: 0}
 --- !u!1 &1882025743
 GameObject:
@@ -2009,7 +2011,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1882025744}
   - component: {fileID: 1882025745}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2102,7 +2104,7 @@ GameObject:
   - component: {fileID: 1901599530}
   - component: {fileID: 1901599529}
   - component: {fileID: 1901599528}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2224,7 +2226,7 @@ GameObject:
   - component: {fileID: 2065208995}
   - component: {fileID: 2065208994}
   - component: {fileID: 2065208993}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

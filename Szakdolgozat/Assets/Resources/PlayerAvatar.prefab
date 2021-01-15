@@ -194,7 +194,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 2.2285714, y: 1}
+    m_SensorSize: {x: 2.217494, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -273,7 +273,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 2.2285714, y: 1}
+    m_SensorSize: {x: 2.217494, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -420,6 +420,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2118032240291218568}
   - component: {fileID: 6971413616623454353}
+  - component: {fileID: 7515372503210489875}
   m_Layer: 0
   m_Name: CM FreeLook1
   m_TagString: Untagged
@@ -474,7 +475,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 2.2285714, y: 1}
+    m_SensorSize: {x: 2.217494, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -550,6 +551,36 @@ MonoBehaviour:
   - {fileID: 1239204571967319414}
   - {fileID: 6909385242888986551}
   - {fileID: 527773527699896856}
+--- !u!114 &7515372503210489875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3062569369862073405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e501d18bb52cf8c40b1853ca4904654f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CollideAgainst:
+    serializedVersion: 2
+    m_Bits: 513
+  m_IgnoreTag: Player
+  m_TransparentLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_MinimumDistanceFromTarget: 0.1
+  m_AvoidObstacles: 1
+  m_DistanceLimit: 0
+  m_MinimumOcclusionTime: 0
+  m_CameraRadius: 0.1
+  m_Strategy: 0
+  m_MaximumEffort: 4
+  m_SmoothingTime: 0
+  m_Damping: 0
+  m_DampingWhenOccluded: 0
+  m_OptimalTargetDistance: 0
 --- !u!1 &4152701881343552242
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,7 +775,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 2.2285714, y: 1}
+    m_SensorSize: {x: 2.217494, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -872,8 +903,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4415257167461952294}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.17709334, y: -0.40493247, z: -4.650977}
+  m_LocalRotation: {x: 0.34379563, y: 0.38716683, z: -0.15832064, w: 0.8407384}
+  m_LocalPosition: {x: -3.217976, y: 4.2146873, z: -2.7529888}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3597692789238709414}
@@ -1247,7 +1278,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 2.2285714, y: 1}
+    m_SensorSize: {x: 2.217494, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1278,7 +1309,7 @@ GameObject:
   - component: {fileID: 733975230925862465}
   - component: {fileID: 6607503029965007174}
   - component: {fileID: 1322559105535136693}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerAvatar
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1518,7 +1549,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6231081517893794324}
-  m_LocalRotation: {x: 0.2923325, y: 0.38211107, z: -0.17016082, w: 0.85998726}
+  m_LocalRotation: {x: 0.29233244, y: 0.38211107, z: -0.17016079, w: 0.8599873}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1562,7 +1593,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 2.2285714, y: 1}
+    m_SensorSize: {x: 2.217494, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1767,7 +1798,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 2.2285714, y: 1}
+    m_SensorSize: {x: 2.217494, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

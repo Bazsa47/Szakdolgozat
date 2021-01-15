@@ -11,6 +11,6 @@ public class SpawnPlayers : MonoBehaviour
     void Awake() 
     {
         int spawnPoint = Random.Range(0, GameSetup.GS.spawnPoints.Length);
-            PhotonNetwork.Instantiate("PhotonNetworkPlayer", GameSetup.GS.spawnPoints[0].position, GameSetup.GS.spawnPoints[0].rotation, 0);
+        PhotonNetwork.Instantiate("PhotonNetworkPlayer", GameSetup.GS.spawnPoints[spawnPoint].position, GameSetup.GS.spawnPoints[spawnPoint].rotation, 0);
     }
 }
