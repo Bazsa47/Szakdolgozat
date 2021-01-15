@@ -137,6 +137,12 @@
     <Reference Include="UnityEditor.UI">
       <HintPath>C:/Users/balaz/OneDrive/Asztali gép/EKE/Szakdoga/Szakdolgozat/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>C:/Users/balaz/OneDrive/Asztali gép/EKE/Szakdoga/Szakdolgozat/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>C:/Users/balaz/OneDrive/Asztali gép/EKE/Szakdoga/Szakdolgozat/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
     </Reference>
@@ -319,6 +325,9 @@
     </Reference>
     <Reference Include="websocket-sharp">
       <HintPath>C:/Users/balaz/OneDrive/Asztali gép/EKE/Szakdoga/Szakdolgozat/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="clipper_library">
+      <HintPath>C:/Users/balaz/OneDrive/Asztali gép/EKE/Szakdoga/Szakdolgozat/Library/PackageCache/com.unity.cinemachine@2.7.1/Runtime/ThirdParty/clipper_library.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.3f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

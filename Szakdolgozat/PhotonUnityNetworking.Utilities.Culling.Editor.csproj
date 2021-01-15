@@ -275,6 +275,9 @@
     <Reference Include="websocket-sharp">
       <HintPath>C:/Users/balaz/OneDrive/Asztali gép/EKE/Szakdoga/Szakdolgozat/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
     </Reference>
+    <Reference Include="clipper_library">
+      <HintPath>C:/Users/balaz/OneDrive/Asztali gép/EKE/Szakdoga/Szakdolgozat/Library/PackageCache/com.unity.cinemachine@2.7.1/Runtime/ThirdParty/clipper_library.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:/Users/balaz/OneDrive/Asztali gép/EKE/Szakdoga/Szakdolgozat/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>

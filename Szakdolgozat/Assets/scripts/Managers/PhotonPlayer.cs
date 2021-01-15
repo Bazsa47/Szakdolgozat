@@ -16,7 +16,7 @@ public class PhotonPlayer : MonoBehaviour
         if (PV.IsMine)
         {
             myAvatar = PhotonNetwork.Instantiate("PlayerAvatar",
-                GameSetup.GS.spawnPoints[spawnPoint].position, GameSetup.GS.spawnPoints[spawnPoint].rotation, 0);
+                GameSetup.GS.spawnPoints[0].position, GameSetup.GS.spawnPoints[spawnPoint].rotation, 0);
         }
     }
 }
