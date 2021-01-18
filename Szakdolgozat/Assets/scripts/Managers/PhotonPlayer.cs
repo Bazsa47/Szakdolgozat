@@ -8,15 +8,16 @@ public class PhotonPlayer : MonoBehaviour
 {
     private PhotonView PV;
     public GameObject myAvatar;
+    public GameObject photonNetworkPlayer;
 
     void Start()
     {
         PV = GetComponent<PhotonView>();
-        int spawnPoint = Random.Range(0, GameSetup.GS.spawnPoints.Length);
+        int spawnPoint =  Random.Range(0, GameSetup.GS.spawnPoints.Length);
         if (PV.IsMine)
         {
             myAvatar = PhotonNetwork.Instantiate("PlayerAvatar",
-                GameSetup.GS.spawnPoints[0].position, GameSetup.GS.spawnPoints[spawnPoint].rotation, 0);
+               photonNetworkPlayer.transform.position, GameSetup.GS.spawnPoints[spawnPoint].rotation, 0);
         }
     }
 }
