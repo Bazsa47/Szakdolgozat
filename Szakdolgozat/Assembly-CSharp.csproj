@@ -86,6 +86,7 @@
     <Compile Include="Assets\scripts\SingletonReferences.cs" />
     <Compile Include="Assets\scripts\SpawnPlayers.cs" />
     <Compile Include="Assets\scripts\test.cs" />
+    <Compile Include="Assets\scripts\testEnemySlain.cs" />
     <Compile Include="Assets\scripts\Utilities\ExtTransforms.cs" />
     <Compile Include="Assets\SetPlayerName.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
