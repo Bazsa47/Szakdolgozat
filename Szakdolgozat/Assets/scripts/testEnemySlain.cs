@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class testEnemySlain : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+
+
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.other.CompareTag("Player"))
+        if (other.CompareTag("weapon"))
         {
             Destroy(this.gameObject);
         }

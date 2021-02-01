@@ -18,6 +18,11 @@ public class PhotonPlayer : MonoBehaviour
         {
             myAvatar = PhotonNetwork.Instantiate("PlayerAvatar",
                photonNetworkPlayer.transform.position, GameSetup.GS.spawnPoints[spawnPoint].rotation, 0);
+            myAvatar.transform.Find("Camera").gameObject.SetActive(true);
+            myAvatar.transform.Find("CMFreeLook1").gameObject.SetActive(true);
+            ((MonoBehaviour)myAvatar.GetComponent("AttackController")).enabled = true;
+            ((MonoBehaviour)myAvatar.GetComponent("player_movement")).enabled = true;
         }
+        
     }
 }

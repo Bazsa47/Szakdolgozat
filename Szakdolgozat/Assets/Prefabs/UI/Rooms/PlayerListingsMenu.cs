@@ -83,6 +83,7 @@ public class PlayerListingsMenu : MonoBehaviourPunCallbacks
     {
         if(PhotonNetwork.IsMasterClient)
         {
+            PhotonNetwork.AutomaticallySyncScene = true;
             PhotonNetwork.LoadLevel(1);
             PhotonNetwork.CurrentRoom.IsOpen = false;
             PhotonNetwork.CurrentRoom.IsVisible = false;
