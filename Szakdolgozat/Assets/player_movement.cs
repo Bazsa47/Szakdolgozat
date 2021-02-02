@@ -15,6 +15,7 @@ public class player_movement : MonoBehaviour
     void Start()
     {
         PV = GetComponent<PhotonView>();
+        cam = GetComponent<Camera>().transform;
     }
 
     void Update()

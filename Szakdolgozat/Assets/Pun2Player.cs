@@ -30,10 +30,10 @@ public class Pun2Player : MonoBehaviourPun, IPunObservable
             {
                 localScripts[i].enabled = false;
             }
-            //for (int i = 0; i < localObjects.Length; i++)
-            //{
-            //    localObjects[i].SetActive(false);
-            //}
+            for (int i = 0; i < localObjects.Length; i++)
+            {
+                localObjects[i].SetActive(false);
+            }
         }
     }
 
