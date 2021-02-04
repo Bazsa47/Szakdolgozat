@@ -15,7 +15,7 @@ public class player_movement : MonoBehaviour
     void Start()
     {
         PV = GetComponent<PhotonView>();
-        cam = GetComponent<Camera>().transform;
+        cam = this.gameObject.transform.Find("Camera").GetComponent<Camera>().transform;
     }
 
     void Update()

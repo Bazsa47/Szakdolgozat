@@ -454,14 +454,13 @@ GameObject:
   - component: {fileID: 2438301959330035110}
   - component: {fileID: 5706731472267280908}
   - component: {fileID: 82315148738755413}
-  - component: {fileID: 3821605043903354546}
-  - component: {fileID: 8225801795057627116}
   - component: {fileID: 5482967136420750375}
   - component: {fileID: 733975230925862465}
   - component: {fileID: 6607503029965007174}
-  - component: {fileID: 1322559105535136693}
-  - component: {fileID: 6091507669508364828}
+  - component: {fileID: 3821605043903354546}
+  - component: {fileID: 8225801795057627116}
   - component: {fileID: 5073555064546004878}
+  - component: {fileID: 3623011745608589595}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: enemy
@@ -571,40 +570,6 @@ MonoBehaviour:
   m_SynchronizePosition: 1
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 1
---- !u!143 &3821605043903354546
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5683830489930144498}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &8225801795057627116
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5683830489930144498}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
 --- !u!114 &5482967136420750375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -647,32 +612,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84f30fd362f9e2c4a8977a19378d760a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1322559105535136693
-MonoBehaviour:
+--- !u!143 &3821605043903354546
+CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5683830489930144498}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 719a2f745b943a846bf1aa62c8c912f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &6091507669508364828
-MonoBehaviour:
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &8225801795057627116
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5683830489930144498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0065f655e619064295a7ff33e587e94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 5073555064546004878}
-  pv: {fileID: 5706731472267280908}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!114 &5073555064546004878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -686,6 +659,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 100
+--- !u!114 &3623011745608589595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5683830489930144498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0065f655e619064295a7ff33e587e94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 5073555064546004878}
+  pv: {fileID: 5706731472267280908}
 --- !u!1 &8139762718638179335
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,6 +933,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4917670216108860792}
     m_Modifications:
+    - target: {fileID: 1138316777578532, guid: bf6d8c70d0457c6439cd9930ce3deb64, type: 3}
+      propertyPath: m_Name
+      value: Sword_classic
+      objectReference: {fileID: 0}
     - target: {fileID: 3080174007894130955, guid: bf6d8c70d0457c6439cd9930ce3deb64,
         type: 3}
       propertyPath: m_IsTrigger
@@ -955,10 +946,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1138316777578532, guid: bf6d8c70d0457c6439cd9930ce3deb64, type: 3}
-      propertyPath: m_Name
-      value: Sword_classic
       objectReference: {fileID: 0}
     - target: {fileID: 4043649310325312, guid: bf6d8c70d0457c6439cd9930ce3deb64, type: 3}
       propertyPath: m_LocalPosition.x

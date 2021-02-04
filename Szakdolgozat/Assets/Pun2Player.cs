@@ -18,7 +18,7 @@ public class Pun2Player : MonoBehaviourPun, IPunObservable
         if (photonView.IsMine)
         {
             //Player is local
-            gameObject.tag = "Player";
+            //gameObject.tag = "Player";
             //Add Rigidbody to make the player interact with rigidbody
             Rigidbody r = gameObject.GetComponent<Rigidbody>();
             r.isKinematic = true;
