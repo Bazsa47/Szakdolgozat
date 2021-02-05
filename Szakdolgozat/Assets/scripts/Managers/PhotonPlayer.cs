@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using Cinemachine;
 
 public class PhotonPlayer : MonoBehaviour
 {
@@ -16,16 +17,33 @@ public class PhotonPlayer : MonoBehaviour
         int spawnPoint =  Random.Range(0, GameSetup.GS.spawnPoints.Length);
         if (PV.IsMine)
         {
-            myAvatar = PhotonNetwork.Instantiate("PlayerAvatar",
-               photonNetworkPlayer.transform.position, GameSetup.GS.spawnPoints[spawnPoint].rotation, 0);
-            ((MonoBehaviour)myAvatar.GetComponent("AttackController")).enabled = true;
-            ((MonoBehaviour)myAvatar.GetComponent("player_movement")).enabled = true;
+            myAvatar = PhotonNetwork.Instantiate("PlayerAvatar", photonNetworkPlayer.transform.position, GameSetup.GS.spawnPoints[spawnPoint].rotation, 0);
+            myAvatar.GetComponent<player_movement>().enabled = false;
+            //Camera (CinemachineBrain)
             myAvatar.transform.Find("Camera").gameObject.AddComponent<Camera>();
-            myAvatar.transform.Find("Camera").gameObject.transform.localPosition= new Vector3(0,1.58f,-4.29f);
-            myAvatar.transform.Find("Camera").gameObject.transform.localRotation = new Quaternion(0.1f,0,0,1);
+            myAvatar.transform.Find("Camera").gameObject.AddComponent<CinemachineBrain>();
 
 
+            GameObject cmfl = new GameObject();
+            cmfl.transform.parent = myAvatar.transform;
+            cmfl.AddComponent<CinemachineFreeLook>();
+            CinemachineFreeLook camcontroller = cmfl.GetComponent<CinemachineFreeLook>();
+            camcontroller.LookAt = myAvatar.transform;
+            camcontroller.Follow = myAvatar.transform;
+            camcontroller.m_BindingMode = CinemachineTransposer.BindingMode.WorldSpace;
+            camcontroller.m_XAxis.m_InvertInput = false;
+            camcontroller.m_YAxis.m_InvertInput = true;
+            //TOP
+            camcontroller.m_Orbits[0].m_Height = 4;
+            camcontroller.m_Orbits[0].m_Radius = 7.5f;
+            //MIDDLE
+            camcontroller.m_Orbits[1].m_Height = 2;
+            camcontroller.m_Orbits[1].m_Radius = 7.5f;
+            //BOTTOM
+            camcontroller.m_Orbits[2].m_Height = -1f;
+            camcontroller.m_Orbits[2].m_Radius = 5;
 
+            myAvatar.GetComponent<player_movement>().enabled = true;
 
         }
         

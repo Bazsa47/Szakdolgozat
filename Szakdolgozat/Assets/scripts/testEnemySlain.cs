@@ -4,21 +4,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class testEnemySlain : MonoBehaviour, IPunOwnershipCallbacks
+public class testEnemySlain : MonoBehaviour
 {
 
     public Enemy enemy;
     public PhotonView pv;
 
-    public void OnOwnershipRequest(PhotonView targetView, Player requestingPlayer)
-    {
-        PhotonNetwork.Destroy(targetView.gameObject);
-    }
-
-    public void OnOwnershipTransfered(PhotonView targetView, Player previousOwner)
-    {
-        PhotonNetwork.Destroy(targetView.gameObject);
-    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -36,19 +27,31 @@ public class testEnemySlain : MonoBehaviour, IPunOwnershipCallbacks
     {
         if (other.CompareTag("weapon"))
         {
-            int newHp = enemy.hp - 35;
-            pv.RPC("DmgEnemy", RpcTarget.All, newHp);
-           
+            if (pv.IsMine)
+            {
+                int newHp = enemy.hp - 35;
+                if (newHp <= 0)
+                {
+                    PhotonNetwork.Destroy(this.gameObject);
+                }
+                else
+                {
+                    pv.RPC("DmgEnemy", RpcTarget.All, newHp);
 
+                }
+
+            }
+                      
         }
     }
 
     [PunRPC]
     public void DmgEnemy(int newHp)
     {
-        enemy.hp = newHp;
-        if (enemy.hp <= 0)
-            PhotonNetwork.Destroy(this.gameObject);
+            enemy.hp = newHp;
+               
+            //kiküldi minden kliensnek, de csak az tudja elpusztítani akié, így a többiek hibát kapnak.
+
     }
 
 }
