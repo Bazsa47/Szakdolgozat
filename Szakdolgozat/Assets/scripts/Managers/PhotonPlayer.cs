@@ -19,10 +19,8 @@ public class PhotonPlayer : MonoBehaviour
         {
             myAvatar = PhotonNetwork.Instantiate("PlayerAvatar", photonNetworkPlayer.transform.position, GameSetup.GS.spawnPoints[spawnPoint].rotation, 0);
             myAvatar.GetComponent<player_movement>().enabled = false;
-            //Camera (CinemachineBrain)
             myAvatar.transform.Find("Camera").gameObject.AddComponent<Camera>();
             myAvatar.transform.Find("Camera").gameObject.AddComponent<CinemachineBrain>();
-
 
             GameObject cmfl = new GameObject();
             cmfl.transform.parent = myAvatar.transform;
@@ -43,6 +41,8 @@ public class PhotonPlayer : MonoBehaviour
             camcontroller.m_Orbits[2].m_Height = -1f;
             camcontroller.m_Orbits[2].m_Radius = 5;
 
+            cmfl.AddComponent<CinemachineCollider>();
+            cmfl.GetComponent<CinemachineCollider>().m_CollideAgainst = LayerMask.GetMask("obstacle");
             myAvatar.GetComponent<player_movement>().enabled = true;
 
         }
