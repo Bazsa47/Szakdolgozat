@@ -21,7 +21,6 @@ ScriptsOnlyBuild:
     - SetPlayerName
     - SingletonReferences
     - SpawnPlayers
-    - collisintestscript
     - player_movement
     - test
     - testEnemySlain
@@ -41,7 +40,6 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
     PhotonUnityNetworking.Editor.dll:
-    - Photon.Pun.PhotonRigidbodyViewEditor
     - Photon.Pun.PhotonTransformViewEditor
     - Photon.Pun.PhotonViewInspector
     PhotonUnityNetworking.dll:
@@ -60,8 +58,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -199,8 +199,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 10380}
     - Class: 114
       Script: {instanceID: 10392}
-    - Class: 114
-      Script: {instanceID: 10420}
     - Class: 114
       Script: {instanceID: 10424}
     - Class: 114
@@ -770,7 +768,7 @@ ScriptsOnlyBuild:
     className: CinemachinePostProcessing
   - hash:
       serializedVersion: 2
-      Hash: 70944e219d765b7236684c53ed362751
+      Hash: 3eadb111db71365c0749d8c6fc097b0b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AttackController
@@ -1992,6 +1990,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WeaponsManager
   platform: 5
   scenePathNames:
   - Assets/Scenes/Rooms.unity
