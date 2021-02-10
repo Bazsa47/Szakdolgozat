@@ -15,6 +15,7 @@ public class PhotonPlayer : MonoBehaviour
     {
         PV = GetComponent<PhotonView>();
         int spawnPoint =  Random.Range(0, GameSetup.GS.spawnPoints.Length);
+        int current_index = 0;
         if (PV.IsMine)
         {
             myAvatar = PhotonNetwork.Instantiate("PlayerAvatar", photonNetworkPlayer.transform.position, GameSetup.GS.spawnPoints[spawnPoint].rotation, 0);

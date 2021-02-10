@@ -9,6 +9,7 @@ public class AttackController : MonoBehaviour
     public Collider[] weaponCollider;
     public PhotonView PV;
     public Transform player;
+    public PhotonView WeaponsPV;
 
     private int currentWeaponIndex = 0;
     public GameObject sword, spear, ranged;
@@ -23,28 +24,7 @@ public class AttackController : MonoBehaviour
             {
                 currentWeaponIndex = 0;
             }
-
-
-            switch ((Weapons)(currentWeaponIndex))
-            {
-                case Weapons.Sword:
-                    sword.SetActive(true);
-                    spear.SetActive(false);
-                    ranged.SetActive(false);
-                    break;
-                case Weapons.Spear:
-                    sword.SetActive(false);
-                    spear.SetActive(true);
-                    ranged.SetActive(false);
-                    break;
-                case Weapons.Ranged:
-                    sword.SetActive(false);
-                    spear.SetActive(false);
-                    ranged.SetActive(true);
-                    break;
-                default:
-                    break;
-            }
+            WeaponsPV.RPC("SwitchWeapon",RpcTarget.All, currentWeaponIndex, WeaponsPV.ViewID);
         }
 
         //basic attack
@@ -66,12 +46,42 @@ public class AttackController : MonoBehaviour
     public enum Weapons { Sword = 0, Spear = 1, Ranged = 2 };
     void Start()
     {
-        PV = GetComponent<PhotonView>();
+       // PV = GetComponent<PhotonView>();
     }
 
-    void SwitchWeapon(int weaponID)
+    [PunRPC]
+    void SwitchWeapon(int weaponID, int viewID)
     {
+       
 
+        switch ((Weapons)(weaponID))
+        {
+            case Weapons.Sword:
+                //sword.SetActive(true);
+                //spear.SetActive(false);
+                //ranged.SetActive(false);
+                PhotonView.Find(viewID).gameObject.transform.Find("Wand_").gameObject.SetActive(false);
+                PhotonView.Find(viewID).gameObject.transform.Find("Sword_").gameObject.SetActive(true);
+                break;
+            case Weapons.Spear:
+                //sword.SetActive(false);
+                //spear.SetActive(true);
+                //ranged.SetActive(false);
+                PhotonView.Find(viewID).gameObject.transform.Find("Sword_").gameObject.SetActive(false);
+                PhotonView.Find(viewID).gameObject.transform.Find("Spear_").gameObject.SetActive(true);
+
+                break;
+            case Weapons.Ranged:
+                //sword.SetActive(false);
+                //spear.SetActive(false);
+                //ranged.SetActive(true);
+
+                PhotonView.Find(viewID).gameObject.transform.Find("Spear_").gameObject.SetActive(false);
+                PhotonView.Find(viewID).gameObject.transform.Find("Wand_").gameObject.SetActive(true);
+                break;
+            default:
+                break;
+        }
     }
 
 }

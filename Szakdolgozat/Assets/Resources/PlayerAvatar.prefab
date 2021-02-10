@@ -829,6 +829,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6733870707195247935}
   - component: {fileID: 1778458221962209481}
+  - component: {fileID: 341664999782209879}
   m_Layer: 0
   m_Name: Weapons
   m_TagString: Untagged
@@ -874,9 +875,32 @@ MonoBehaviour:
   - {fileID: 1386175052930894391}
   PV: {fileID: 5706731472267280908}
   player: {fileID: 3597692789238709414}
+  WeaponsPV: {fileID: 341664999782209879}
   sword: {fileID: 1792696499332107391}
   spear: {fileID: 2066254665915749421}
   ranged: {fileID: 9147911673610792495}
+--- !u!114 &341664999782209879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8518160948277420132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 0
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  viewIdField: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &8724387246836559920
 GameObject:
   m_ObjectHideFlags: 0
@@ -1213,10 +1237,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4917670216108860792}
     m_Modifications:
-    - target: {fileID: 1138316777578532, guid: bf6d8c70d0457c6439cd9930ce3deb64, type: 3}
-      propertyPath: m_Name
-      value: Sword_classic
-      objectReference: {fileID: 0}
     - target: {fileID: 3080174007894130955, guid: bf6d8c70d0457c6439cd9930ce3deb64,
         type: 3}
       propertyPath: m_IsTrigger
@@ -1226,6 +1246,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138316777578532, guid: bf6d8c70d0457c6439cd9930ce3deb64, type: 3}
+      propertyPath: m_Name
+      value: Sword_classic
       objectReference: {fileID: 0}
     - target: {fileID: 4043649310325312, guid: bf6d8c70d0457c6439cd9930ce3deb64, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1285,6 +1309,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf6d8c70d0457c6439cd9930ce3deb64, type: 3}
+--- !u!65 &1278457361413611776 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 3080174007894130955, guid: bf6d8c70d0457c6439cd9930ce3deb64,
+    type: 3}
+  m_PrefabInstance: {fileID: 4252251005210681355}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4253382157810663471 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1138316777578532, guid: bf6d8c70d0457c6439cd9930ce3deb64,
@@ -1297,12 +1327,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4252251005210681355}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1278457361413611776 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 3080174007894130955, guid: bf6d8c70d0457c6439cd9930ce3deb64,
-    type: 3}
-  m_PrefabInstance: {fileID: 4252251005210681355}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6604292491634105526
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1310,11 +1334,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9001948574259220784}
     m_Modifications:
-    - target: {fileID: 1824678676741916971, guid: d3a6c914c29a21d4d933dca3771774b7,
-        type: 3}
-      propertyPath: m_Name
-      value: Weapon-Wand
-      objectReference: {fileID: 0}
     - target: {fileID: 5216829482334638571, guid: d3a6c914c29a21d4d933dca3771774b7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1384,6 +1403,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.69399
+      objectReference: {fileID: 0}
+    - target: {fileID: 1824678676741916971, guid: d3a6c914c29a21d4d933dca3771774b7,
+        type: 3}
+      propertyPath: m_Name
+      value: Weapon-Wand
       objectReference: {fileID: 0}
     - target: {fileID: 7439709773408394521, guid: d3a6c914c29a21d4d933dca3771774b7,
         type: 3}
@@ -1456,14 +1480,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1490808697457499557}
     m_Modifications:
-    - target: {fileID: 100000, guid: f2da8aaf9cb670b41b2133344c52c481, type: 3}
-      propertyPath: m_Name
-      value: spear
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: f2da8aaf9cb670b41b2133344c52c481, type: 3}
-      propertyPath: m_TagString
-      value: weapon
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f2da8aaf9cb670b41b2133344c52c481, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.06
@@ -1519,6 +1535,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: f2da8aaf9cb670b41b2133344c52c481, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.086749904
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f2da8aaf9cb670b41b2133344c52c481, type: 3}
+      propertyPath: m_Name
+      value: spear
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f2da8aaf9cb670b41b2133344c52c481, type: 3}
+      propertyPath: m_TagString
+      value: weapon
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2da8aaf9cb670b41b2133344c52c481, type: 3}
