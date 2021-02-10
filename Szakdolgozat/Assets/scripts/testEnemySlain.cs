@@ -19,7 +19,6 @@ public class testEnemySlain : MonoBehaviour
             {
                 pv.RequestOwnership();
             }
-
         }
     }
 

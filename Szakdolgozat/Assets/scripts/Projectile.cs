@@ -10,6 +10,7 @@ public class Projectile : MonoBehaviour, IPunOwnershipCallbacks
     public float countdown = 3;
     bool exploded = false;
     public PhotonView PV;
+    public ParticleSystem explosionParticle;
     void Awake()
     {
         fireball = GetComponent<Rigidbody>();
@@ -31,6 +32,7 @@ public class Projectile : MonoBehaviour, IPunOwnershipCallbacks
     {
         if (PV.IsMine)
         {
+            Explode();
             PhotonNetwork.Destroy(PhotonView.Find(viewId).gameObject.transform.parent.gameObject);
         }
         else
@@ -45,6 +47,23 @@ public class Projectile : MonoBehaviour, IPunOwnershipCallbacks
 
     public void OnOwnershipTransfered(PhotonView targetView, Player previousOwner)
     {
+        Explode();
         PhotonNetwork.Destroy(PhotonView.Find(PV.ViewID).gameObject.transform.parent.gameObject);
     }
+
+    void Explode()
+    {
+        PhotonNetwork.Instantiate("Explosion",this.gameObject.transform.position,Quaternion.identity);       
+    }
+
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (!other.CompareTag("Player"))
+    //    {
+    //        PV.RPC("DestroyFireball", RpcTarget.All, PV.ViewID);
+    //    }
+
+    //}
+
+
 }

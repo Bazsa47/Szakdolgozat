@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b88e238ad7fc5c044a075a0b644ee85e, type: 2}
+  - {fileID: 2100000, guid: 4c27f39ef71000148aa8720e4df4d5f3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -507,7 +507,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationX:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -560,7 +560,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -613,7 +613,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotation:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -4773,7 +4773,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 409bf720e9924426b9f253cf037a8f4e, type: 2}
+  - {fileID: 2100000, guid: 8c2a5a924a5e71a489c0185794ae5dc6, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -4848,6 +4848,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countdown: 3
   PV: {fileID: 58022233360760582}
+  explosionParticle: {fileID: 0}
 --- !u!114 &58022233360760582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4888,7 +4889,7 @@ GameObject:
   - component: {fileID: 8225801795057627116}
   m_Layer: 8
   m_Name: fireball
-  m_TagString: enemy
+  m_TagString: weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

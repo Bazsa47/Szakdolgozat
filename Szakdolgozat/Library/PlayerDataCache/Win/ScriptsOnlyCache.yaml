@@ -1222,7 +1222,7 @@ ScriptsOnlyBuild:
     className: ToggleExpand
   - hash:
       serializedVersion: 2
-      Hash: 797b5ad18c198affd2349979e5a4ee77
+      Hash: 513279ae544622a63067aabc0ca00cef
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Projectile
