@@ -8,6 +8,7 @@ public class AttackController : MonoBehaviour
     public Animation[] anim;
     public Collider[] weaponCollider;
     public PhotonView PV;
+    public Transform player;
 
     private int currentWeaponIndex = 0;
     public GameObject sword, spear, ranged;
@@ -17,7 +18,7 @@ public class AttackController : MonoBehaviour
         Debug.Log(currentWeaponIndex);
         if (Input.GetKeyDown(KeyCode.Q) && !anim[currentWeaponIndex].isPlaying)
         {
-            currentWeaponIndex += 1;
+            currentWeaponIndex += 1; //ezt kell elküldeni a többi playernek
             if (currentWeaponIndex > 2)
             {
                 currentWeaponIndex = 0;
@@ -47,23 +48,30 @@ public class AttackController : MonoBehaviour
         }
 
         //basic attack
-        Debug.Log(currentWeaponIndex);
-        if (Input.GetKeyDown(KeyCode.Mouse0) && !anim[currentWeaponIndex].isPlaying)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !anim[currentWeaponIndex].isPlaying){
+            anim[currentWeaponIndex].Play();
+            if(currentWeaponIndex != 2)
+                weaponCollider[currentWeaponIndex].enabled = true;
+            else
             {
-                anim[currentWeaponIndex].Play();
-                if(currentWeaponIndex != 2)
-                    weaponCollider[currentWeaponIndex].enabled = true;
+                PhotonNetwork.Instantiate("fireball",player.position, this.transform.rotation);
             }
-            if (!anim[currentWeaponIndex].isPlaying)
-            {
-                if (currentWeaponIndex != 2)
-                    weaponCollider[currentWeaponIndex].enabled = false;
-            }
+        }
+
+        if (!anim[currentWeaponIndex].isPlaying){
+            if (currentWeaponIndex != 2)
+                weaponCollider[currentWeaponIndex].enabled = false;
+        }
     }
     public enum Weapons { Sword = 0, Spear = 1, Ranged = 2 };
     void Start()
     {
         PV = GetComponent<PhotonView>();
+    }
+
+    void SwitchWeapon(int weaponID)
+    {
+
     }
 
 }
