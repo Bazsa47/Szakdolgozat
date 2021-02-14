@@ -9,6 +9,7 @@ ScriptsOnlyBuild:
     - GameSettings
     - GameSetup
     - LeaveRoomMenu
+    - ManageHpSliders
     - MasterManager
     - PUN2_RigidbodySync
     - PhotonPlayer
@@ -291,6 +292,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12144}
     - Class: 114
       Script: {instanceID: 12162}
+    - Class: 114
+      Script: {instanceID: 75212}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -2000,6 +2003,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: a305d00d096984851ab70329e575f835
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SetName
+  - hash:
+      serializedVersion: 2
+      Hash: 619ff97bb35751aef21a698ca8c05b16
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ManageHpSliders
   platform: 5
   scenePathNames:
   - Assets/Scenes/Rooms.unity

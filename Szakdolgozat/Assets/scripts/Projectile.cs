@@ -61,7 +61,7 @@ public class Projectile : MonoBehaviour, IPunOwnershipCallbacks
     //    if (!other.CompareTag("Player"))
     //    {
     //        PV.RPC("DestroyFireball", RpcTarget.All, PV.ViewID);
-    //    }
+    //   }
 
     //}
 
