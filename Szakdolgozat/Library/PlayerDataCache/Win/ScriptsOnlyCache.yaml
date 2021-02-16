@@ -13,6 +13,7 @@ ScriptsOnlyBuild:
     - MasterManager
     - PUN2_RigidbodySync
     - PhotonPlayer
+    - PlayerClass
     - PlayerListing
     - PlayerListingsMenu
     - Projectile
@@ -23,6 +24,7 @@ ScriptsOnlyBuild:
     - SetPlayerName
     - SingletonReferences
     - SpawnPlayers
+    - dmgTakeTest
     - player_movement
     - test
     - testEnemySlain
@@ -116,7 +118,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10834}
     - Class: 114
-      Script: {instanceID: 12012}
+      Script: {instanceID: 12016}
+    - Class: 114
+      Script: {instanceID: 56564}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 136
@@ -257,43 +261,45 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11304}
     - Class: 114
-      Script: {instanceID: 11470}
+      Script: {instanceID: 11472}
     - Class: 114
-      Script: {instanceID: 11478}
+      Script: {instanceID: 11480}
     - Class: 114
-      Script: {instanceID: 11492}
-    - Class: 114
-      Script: {instanceID: 11522}
+      Script: {instanceID: 11494}
     - Class: 114
       Script: {instanceID: 11524}
     - Class: 114
-      Script: {instanceID: 11556}
+      Script: {instanceID: 11526}
     - Class: 114
-      Script: {instanceID: 11562}
+      Script: {instanceID: 11558}
     - Class: 114
-      Script: {instanceID: 11638}
+      Script: {instanceID: 11564}
     - Class: 114
-      Script: {instanceID: 11814}
+      Script: {instanceID: 11640}
     - Class: 114
-      Script: {instanceID: 11836}
+      Script: {instanceID: 11726}
     - Class: 114
-      Script: {instanceID: 11976}
+      Script: {instanceID: 11818}
     - Class: 114
-      Script: {instanceID: 12012}
+      Script: {instanceID: 11840}
     - Class: 114
-      Script: {instanceID: 12064}
+      Script: {instanceID: 11980}
     - Class: 114
-      Script: {instanceID: 12098}
+      Script: {instanceID: 12016}
+    - Class: 114
+      Script: {instanceID: 12068}
     - Class: 114
       Script: {instanceID: 12102}
     - Class: 114
-      Script: {instanceID: 12136}
+      Script: {instanceID: 12106}
     - Class: 114
-      Script: {instanceID: 12144}
+      Script: {instanceID: 12140}
     - Class: 114
-      Script: {instanceID: 12162}
+      Script: {instanceID: 12148}
     - Class: 114
-      Script: {instanceID: 75212}
+      Script: {instanceID: 12166}
+    - Class: 114
+      Script: {instanceID: 15176}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -769,7 +775,7 @@ ScriptsOnlyBuild:
     className: CinemachinePostProcessing
   - hash:
       serializedVersion: 2
-      Hash: c64771a5350c7b27a12758e431e20785
+      Hash: 3e0306a515874d95e31fcf9ee23b5a72
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AttackController
@@ -1147,7 +1153,7 @@ ScriptsOnlyBuild:
     className: CurrentRoomEmptyRoomTtlProperty
   - hash:
       serializedVersion: 2
-      Hash: c6e90876ad0164c719179f1edafca1cb
+      Hash: d72a96faf98b3831a2da2084806af616
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: player_movement
@@ -1441,6 +1447,12 @@ ScriptsOnlyBuild:
     className: ServerProperty
   - hash:
       serializedVersion: 2
+      Hash: a305d00d096984851ab70329e575f835
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SetName
+  - hash:
+      serializedVersion: 2
       Hash: d2a2698b314a20912af1eb2b1758dc90
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -1637,6 +1649,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineInputProvider
+  - hash:
+      serializedVersion: 2
+      Hash: 619ff97bb35751aef21a698ca8c05b16
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ManageHpSliders
   - hash:
       serializedVersion: 2
       Hash: c5fd97cc10b89deaf7c60af66a6b0d5a
@@ -2005,16 +2023,16 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: a305d00d096984851ab70329e575f835
+      Hash: bdd52be3e0036a3ed7bf45bd4920a980
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: SetName
+    className: PlayerClass
   - hash:
       serializedVersion: 2
-      Hash: 619ff97bb35751aef21a698ca8c05b16
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: ManageHpSliders
+    className: dmgTakeTest
   platform: 5
   scenePathNames:
   - Assets/Scenes/Rooms.unity

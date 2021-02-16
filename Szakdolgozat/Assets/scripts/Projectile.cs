@@ -56,14 +56,6 @@ public class Projectile : MonoBehaviour, IPunOwnershipCallbacks
         PhotonNetwork.Instantiate("Explosion",this.gameObject.transform.position,Quaternion.identity);       
     }
 
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (!other.CompareTag("Player"))
-    //    {
-    //        PV.RPC("DestroyFireball", RpcTarget.All, PV.ViewID);
-    //   }
-
-    //}
 
 
 }

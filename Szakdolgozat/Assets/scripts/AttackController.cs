@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class AttackController : MonoBehaviour
 {
+    public PlayerClass playerClass;
     public Animation[] anim;
     public Collider[] weaponCollider;
     public PhotonView PV;
@@ -16,7 +17,6 @@ public class AttackController : MonoBehaviour
     private void Update()
     {
         //switch weapon
-        Debug.Log(currentWeaponIndex);
         if (Input.GetKeyDown(KeyCode.Q) && !anim[currentWeaponIndex].isPlaying)
         {
             currentWeaponIndex += 1; //ezt kell elküldeni a többi playernek

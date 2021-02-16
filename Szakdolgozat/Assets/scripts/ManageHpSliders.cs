@@ -15,7 +15,6 @@ public class ManageHpSliders : MonoBehaviour
             case 1:
                 sliders[0].SetActive(true);
                 sliders[0].transform.Find("PlayerName").GetComponent<TextMeshProUGUI>().SetText(PhotonNetwork.PlayerList[0].NickName);
-
                 break;
             case 2:
                 sliders[0].SetActive(true);

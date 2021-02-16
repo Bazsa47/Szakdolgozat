@@ -7,7 +7,7 @@ public class player_movement : MonoBehaviour
 {
 
     public CharacterController controller;
-    public float speed = 6;
+    public PlayerClass playerClass;
     PhotonView PV;
     public float smooth = 0.1f;
     float turnSmoothVelocity;
@@ -34,7 +34,7 @@ public class player_movement : MonoBehaviour
                 transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
                 Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-                controller.Move(moveDir.normalized * speed * Time.deltaTime);
+                controller.Move(moveDir.normalized * playerClass.Speed * Time.deltaTime);
             }
 
             //gameObject.transform.rotation = new Quaternion(gameObject.transform.rotation.x,cam.transform.rotation.y, gameObject.transform.rotation.z,1);
