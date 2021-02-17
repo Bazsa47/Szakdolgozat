@@ -2091,6 +2091,8 @@ MonoBehaviour:
   speed: 6
   dmg: 50
   playerName: 
+  canTakeDmg: 1
+  countdown: 3
 --- !u!1 &5947960914389214162
 GameObject:
   m_ObjectHideFlags: 0
