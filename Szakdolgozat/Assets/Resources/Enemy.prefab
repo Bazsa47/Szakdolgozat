@@ -364,6 +364,8 @@ GameObject:
   - component: {fileID: 3821605043903354546}
   - component: {fileID: 8225801795057627116}
   - component: {fileID: 385750540240911030}
+  - component: {fileID: 8600711654512421338}
+  - component: {fileID: 793246698094822794}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: enemy
@@ -565,6 +567,33 @@ MonoBehaviour:
   speed: 4.5
   dmg: 25
   target: {fileID: 0}
+--- !u!114 &8600711654512421338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5683830489930144498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dec763dfecb1ce5498228ded3e0e3efe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 3597692789238709414, guid: 4d36f1225c7301c4eae1cc9310b230e1, type: 3}
+  distance: 5
+  swordSwing: {fileID: 3183911527065849751}
+--- !u!114 &793246698094822794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5683830489930144498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed34e7cd9bbbafe45b5fde988162ea36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8139762718638179335
 GameObject:
   m_ObjectHideFlags: 0
