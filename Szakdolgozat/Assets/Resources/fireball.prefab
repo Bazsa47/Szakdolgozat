@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 6686390818111540427}
   - component: {fileID: 3532968257861612604}
   - component: {fileID: 58022233360760582}
+  - component: {fileID: 1277843357198587739}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: weapon
@@ -4871,6 +4872,18 @@ MonoBehaviour:
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &1277843357198587739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5208029812725106453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bb4382d242d4a94283a3a6656707fe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5683830489930144498
 GameObject:
   m_ObjectHideFlags: 0

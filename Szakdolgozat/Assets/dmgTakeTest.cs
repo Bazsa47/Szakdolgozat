@@ -16,8 +16,8 @@ public class dmgTakeTest : MonoBehaviour
             {
                 other.gameObject.GetComponent<PlayerClass>().Die();
             }
-            Debug.Log("new Hp : " + newHp);
-            other.gameObject.GetComponent<PlayerClass>().TakeDmg(newHp);
+            else
+                other.gameObject.GetComponent<PlayerClass>().TakeDmg(newHp);
 
         }
 

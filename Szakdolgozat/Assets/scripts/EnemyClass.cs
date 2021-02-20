@@ -1,4 +1,5 @@
 ﻿using Photon.Pun;
+using Photon.Realtime;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,7 +14,15 @@ public class EnemyClass : Entity
     }
     public override void Die()
     {
-        throw new System.NotImplementedException();
+        PhotonView pv = GetComponent<PhotonView>();
+        pv.RPC("DieRPC", RpcTarget.All, pv.ViewID);
+    }
+
+    [PunRPC]
+    public void DieRPC(int viewID)
+    {
+        if(PhotonView.Find(viewID).IsMine)
+            PhotonNetwork.Destroy(PhotonView.Find(viewID).gameObject);
     }
 
     public override void TakeDmg(float newHp)

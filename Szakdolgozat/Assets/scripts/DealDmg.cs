@@ -11,7 +11,10 @@ public class DealDmg : MonoBehaviour
         {
             float hp = other.gameObject.GetComponent<EnemyClass>().Hp;
             float newHp = hp - playerClass.Dmg;
-            other.GetComponent<EnemyClass>().TakeDmg(newHp);
+            if (newHp <= 0f)
+                other.gameObject.GetComponent<EnemyClass>().Die();
+            else
+                other.GetComponent<EnemyClass>().TakeDmg(newHp);
         }
     }
 }

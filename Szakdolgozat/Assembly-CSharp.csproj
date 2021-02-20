@@ -81,6 +81,7 @@
     <Compile Include="Assets\scripts\AttackController.cs" />
     <Compile Include="Assets\scripts\DamageEnemy.cs" />
     <Compile Include="Assets\scripts\DealDmg.cs" />
+    <Compile Include="Assets\scripts\DealDmgFireball.cs" />
     <Compile Include="Assets\scripts\Enemy.cs" />
     <Compile Include="Assets\scripts\EnemyClass.cs" />
     <Compile Include="Assets\scripts\Entity.cs" />

@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - CreateRoom
     - CurrentRoomCanvas
     - DealDmg
+    - DealDmgFireball
     - EnemyClass
     - GameSettings
     - GameSetup
@@ -121,7 +122,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10840}
     - Class: 114
-      Script: {instanceID: 12022}
+      Script: {instanceID: 12026}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 136
@@ -230,77 +231,79 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10856}
     - Class: 114
-      Script: {instanceID: 10948}
+      Script: {instanceID: 10914}
     - Class: 114
-      Script: {instanceID: 10990}
+      Script: {instanceID: 10950}
     - Class: 114
-      Script: {instanceID: 11012}
+      Script: {instanceID: 10992}
     - Class: 114
-      Script: {instanceID: 11054}
+      Script: {instanceID: 11014}
     - Class: 114
-      Script: {instanceID: 11106}
+      Script: {instanceID: 11056}
     - Class: 114
-      Script: {instanceID: 11122}
+      Script: {instanceID: 11108}
     - Class: 114
-      Script: {instanceID: 11136}
+      Script: {instanceID: 11124}
     - Class: 114
-      Script: {instanceID: 11156}
+      Script: {instanceID: 11138}
     - Class: 114
-      Script: {instanceID: 11226}
+      Script: {instanceID: 11158}
     - Class: 114
-      Script: {instanceID: 11232}
+      Script: {instanceID: 11228}
     - Class: 114
-      Script: {instanceID: 11240}
+      Script: {instanceID: 11234}
     - Class: 114
-      Script: {instanceID: 11264}
+      Script: {instanceID: 11242}
     - Class: 114
-      Script: {instanceID: 11278}
+      Script: {instanceID: 11266}
     - Class: 114
-      Script: {instanceID: 11292}
+      Script: {instanceID: 11280}
     - Class: 114
-      Script: {instanceID: 11310}
+      Script: {instanceID: 11294}
     - Class: 114
-      Script: {instanceID: 11478}
+      Script: {instanceID: 11312}
     - Class: 114
-      Script: {instanceID: 11486}
+      Script: {instanceID: 11480}
     - Class: 114
-      Script: {instanceID: 11500}
+      Script: {instanceID: 11488}
     - Class: 114
-      Script: {instanceID: 11530}
+      Script: {instanceID: 11502}
     - Class: 114
       Script: {instanceID: 11532}
     - Class: 114
-      Script: {instanceID: 11564}
+      Script: {instanceID: 11534}
     - Class: 114
-      Script: {instanceID: 11570}
+      Script: {instanceID: 11566}
     - Class: 114
-      Script: {instanceID: 11646}
+      Script: {instanceID: 11572}
     - Class: 114
-      Script: {instanceID: 11732}
+      Script: {instanceID: 11648}
     - Class: 114
-      Script: {instanceID: 11824}
+      Script: {instanceID: 11734}
     - Class: 114
-      Script: {instanceID: 11846}
+      Script: {instanceID: 11826}
     - Class: 114
-      Script: {instanceID: 11986}
+      Script: {instanceID: 11848}
     - Class: 114
-      Script: {instanceID: 12022}
+      Script: {instanceID: 11988}
     - Class: 114
-      Script: {instanceID: 12074}
+      Script: {instanceID: 11994}
     - Class: 114
-      Script: {instanceID: 12108}
+      Script: {instanceID: 12026}
+    - Class: 114
+      Script: {instanceID: 12078}
     - Class: 114
       Script: {instanceID: 12112}
     - Class: 114
-      Script: {instanceID: 12146}
+      Script: {instanceID: 12116}
     - Class: 114
-      Script: {instanceID: 12154}
+      Script: {instanceID: 12150}
     - Class: 114
-      Script: {instanceID: 12172}
+      Script: {instanceID: 12158}
     - Class: 114
-      Script: {instanceID: 17264}
+      Script: {instanceID: 12176}
     - Class: 114
-      Script: {instanceID: 23630}
+      Script: {instanceID: 15412}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1154,6 +1157,12 @@ ScriptsOnlyBuild:
     className: CinemachinePath
   - hash:
       serializedVersion: 2
+      Hash: 94af2a7da22de085ea070b7b624af7b6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DealDmg
+  - hash:
+      serializedVersion: 2
       Hash: c656dcc13ae391b68d594cc8f9c590b0
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -1814,6 +1823,12 @@ ScriptsOnlyBuild:
     className: CurrentRoomAutoCleanupProperty
   - hash:
       serializedVersion: 2
+      Hash: bdfad24dd1f51a359f4559ac60437212
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyClass
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
@@ -2036,16 +2051,10 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: bdfad24dd1f51a359f4559ac60437212
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: EnemyClass
-  - hash:
-      serializedVersion: 2
-      Hash: 94af2a7da22de085ea070b7b624af7b6
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: DealDmg
+    className: DealDmgFireball
   platform: 5
   scenePathNames:
   - Assets/Scenes/Rooms.unity
