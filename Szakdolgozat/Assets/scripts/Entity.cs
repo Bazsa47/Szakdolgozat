@@ -25,12 +25,13 @@ public abstract class Entity : MonoBehaviour
         set => dmg = value;
     }
 
-    public Entity(float hp, float speed, float dmg)
-    {
-        this.Hp = hp;
-        this.Speed = speed;
-        this.Dmg = dmg;
-    }
+    //public Entity(float hp, float speed, float dmg)
+    //{
+    //    this.Hp = hp;
+    //    this.Speed = speed;
+    //    this.Dmg = dmg;
+    //}
 
     public abstract void TakeDmg(float dmg);
+    public abstract void Die();
 }

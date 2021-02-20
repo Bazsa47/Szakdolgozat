@@ -5,7 +5,8 @@ ScriptsOnlyBuild:
     - CreateOrJoinRoomCanvas
     - CreateRoom
     - CurrentRoomCanvas
-    - Enemy
+    - DealDmg
+    - EnemyClass
     - GameSettings
     - GameSetup
     - LeaveRoomMenu
@@ -203,8 +204,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10396}
     - Class: 114
-      Script: {instanceID: 10430}
-    - Class: 114
       Script: {instanceID: 10480}
     - Class: 114
       Script: {instanceID: 10498}
@@ -214,8 +213,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 10536}
     - Class: 114
       Script: {instanceID: 10562}
-    - Class: 114
-      Script: {instanceID: 10574}
     - Class: 114
       Script: {instanceID: 10680}
     - Class: 114
@@ -300,6 +297,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12154}
     - Class: 114
       Script: {instanceID: 12172}
+    - Class: 114
+      Script: {instanceID: 17264}
+    - Class: 114
+      Script: {instanceID: 23630}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -727,7 +728,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
-      Hash: cf498215508032637ce7cfd1e674405f
+      Hash: 7b05b92026f2a1d2ed9f11f8d0a3a372
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerClass
@@ -781,7 +782,7 @@ ScriptsOnlyBuild:
     className: CinemachinePostProcessing
   - hash:
       serializedVersion: 2
-      Hash: 3e0306a515874d95e31fcf9ee23b5a72
+      Hash: ed3465575878524a27831ccfd3110c7e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AttackController
@@ -2033,6 +2034,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: bdfad24dd1f51a359f4559ac60437212
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyClass
+  - hash:
+      serializedVersion: 2
+      Hash: 94af2a7da22de085ea070b7b624af7b6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DealDmg
   platform: 5
   scenePathNames:
   - Assets/Scenes/Rooms.unity

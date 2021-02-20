@@ -11,6 +11,9 @@ public class AttackController : MonoBehaviour
     public PhotonView PV;
     public Transform player;
     public PhotonView WeaponsPV;
+    public float swordDmg;
+    public float spearDmg;
+    public float wandDmg;
 
     private int currentWeaponIndex = 0;
     public GameObject sword, spear, ranged;
@@ -51,9 +54,7 @@ public class AttackController : MonoBehaviour
 
     [PunRPC]
     void SwitchWeapon(int weaponID, int viewID)
-    {
-       
-
+    {      
         switch ((Weapons)(weaponID))
         {
             case Weapons.Sword:
@@ -62,6 +63,7 @@ public class AttackController : MonoBehaviour
                 //ranged.SetActive(false);
                 PhotonView.Find(viewID).gameObject.transform.Find("Wand_").gameObject.SetActive(false);
                 PhotonView.Find(viewID).gameObject.transform.Find("Sword_").gameObject.SetActive(true);
+                PhotonView.Find(viewID).transform.parent.GetComponent<PlayerClass>().Dmg = swordDmg;
                 break;
             case Weapons.Spear:
                 //sword.SetActive(false);
@@ -69,7 +71,7 @@ public class AttackController : MonoBehaviour
                 //ranged.SetActive(false);
                 PhotonView.Find(viewID).gameObject.transform.Find("Sword_").gameObject.SetActive(false);
                 PhotonView.Find(viewID).gameObject.transform.Find("Spear_").gameObject.SetActive(true);
-
+                PhotonView.Find(viewID).transform.parent.GetComponent<PlayerClass>().Dmg = spearDmg;
                 break;
             case Weapons.Ranged:
                 //sword.SetActive(false);
@@ -78,10 +80,13 @@ public class AttackController : MonoBehaviour
 
                 PhotonView.Find(viewID).gameObject.transform.Find("Spear_").gameObject.SetActive(false);
                 PhotonView.Find(viewID).gameObject.transform.Find("Wand_").gameObject.SetActive(true);
+                PhotonView.Find(viewID).transform.parent.GetComponent<PlayerClass>().Dmg = wandDmg;
                 break;
             default:
                 break;
         }
     }
+
+   
 
 }

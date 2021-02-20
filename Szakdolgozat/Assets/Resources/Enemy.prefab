@@ -363,8 +363,7 @@ GameObject:
   - component: {fileID: 6607503029965007174}
   - component: {fileID: 3821605043903354546}
   - component: {fileID: 8225801795057627116}
-  - component: {fileID: 5073555064546004878}
-  - component: {fileID: 3623011745608589595}
+  - component: {fileID: 385750540240911030}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: enemy
@@ -550,7 +549,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &5073555064546004878
+--- !u!114 &385750540240911030
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -559,24 +558,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 5683830489930144498}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f0c9684bc3f9e24ca62860037977bf4, type: 3}
+  m_Script: {fileID: 11500000, guid: 897a748ee1ad9ca418bf9a1a3a3b8df9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 100
---- !u!114 &3623011745608589595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5683830489930144498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0065f655e619064295a7ff33e587e94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 5073555064546004878}
-  pv: {fileID: 5706731472267280908}
+  hp: 150
+  speed: 4.5
+  dmg: 25
+  target: {fileID: 0}
 --- !u!1 &8139762718638179335
 GameObject:
   m_ObjectHideFlags: 0
