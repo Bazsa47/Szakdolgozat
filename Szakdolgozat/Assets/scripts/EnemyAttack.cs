@@ -22,7 +22,7 @@ public class EnemyAttack : MonoBehaviour
         var lookPos = target.position - transform.position;
         lookPos.y = 0;
         var rotation = Quaternion.LookRotation(lookPos);
-        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 1);
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 10);
 
         if (Vector3.Distance(this.transform.position,target.position) <= distance)
         {           
