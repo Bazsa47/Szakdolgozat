@@ -350,7 +350,7 @@ MonoBehaviour:
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 952, y: 440}
+  m_LastWindowPixelSize: {x: 1190, y: 550}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 00000000000000000000
@@ -384,9 +384,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 76fbffff
+      m_SelectedIDs: 68d0ffff
+      m_LastClickedID: -12184
+      m_ExpandedIDs: 7ad0ffff9adaffffeedfffff5ae6ffff7aecffffbcf1ffff8af6ffff66fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -479,7 +479,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.037140705, y: -0.44409508, z: -0.018260375, w: -0.89514977}
     speed: 2
-    m_Value: {x: -0.0371407, y: 0.44409505, z: 0.018260375, w: 0.89514977}
+    m_Value: {x: 0.0371365, y: -0.4440448, z: -0.018258307, w: -0.8950484}
   m_Size:
     m_Target: 4.019882
     speed: 2
@@ -672,20 +672,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/scripts
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/scripts
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: "C:\\Users\\balaz\\OneDrive\\Asztali g\xE9p\\EKE\\Szakdoga\\Szakdolgozat"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d2350000
-    m_LastClickedID: 13778
-    m_ExpandedIDs: 00000000fc2f0000f8300000ac310000e23100002233000084330000cc330000e0330000b63400002e3500006a350000d235000000ca9a3b
+    m_SelectedIDs: 7c300000
+    m_LastClickedID: 12412
+    m_ExpandedIDs: 000000007c3000006e3100001c3200004e3200008a330000e63300002a3400003e340000103500007e350000ba3500002036000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -713,7 +713,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000fc2f0000f8300000ac310000e23100002233000084330000cc330000e0330000b63400002e3500006a350000d2350000
+    m_ExpandedIDs: 000000007c3000006e3100001c3200004e3200008a330000e63300002a3400003e340000103500007e350000ba35000020360000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -740,7 +740,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

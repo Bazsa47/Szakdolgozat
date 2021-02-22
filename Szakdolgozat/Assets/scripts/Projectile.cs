@@ -10,7 +10,6 @@ public class Projectile : MonoBehaviour, IPunOwnershipCallbacks
     public float countdown = 3;
     bool exploded = false;
     public PhotonView PV;
-    public ParticleSystem explosionParticle;
     void Awake()
     {
         fireball = GetComponent<Rigidbody>();
@@ -53,7 +52,8 @@ public class Projectile : MonoBehaviour, IPunOwnershipCallbacks
 
     void Explode()
     {
-        PhotonNetwork.Instantiate("Explosion",this.gameObject.transform.position,Quaternion.identity);       
+        var explosion = PhotonNetwork.Instantiate("Explosion",this.gameObject.transform.position,Quaternion.identity);
+        //PhotonNetwork.Destroy(explosion.gameObject);
     }
 
 

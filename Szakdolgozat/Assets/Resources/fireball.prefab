@@ -4849,7 +4849,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countdown: 3
   PV: {fileID: 58022233360760582}
-  explosionParticle: {fileID: 0}
 --- !u!114 &58022233360760582
 MonoBehaviour:
   m_ObjectHideFlags: 0

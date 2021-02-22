@@ -17,11 +17,15 @@ public class EnemyAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(this.transform.position,target.position) <= distance)
-        {
-            //turn to target
-            transform.rotation = new Quaternion(transform.rotation.x, -target.rotation.y,transform.rotation.z,1);
 
+        //turn to target
+        var lookPos = target.position - transform.position;
+        lookPos.y = 0;
+        var rotation = Quaternion.LookRotation(lookPos);
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 1);
+
+        if (Vector3.Distance(this.transform.position,target.position) <= distance)
+        {           
             //attack
             if (!swordSwing.isPlaying)
             {
