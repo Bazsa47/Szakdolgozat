@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 544}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -384,9 +384,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 68d0ffff
-      m_LastClickedID: -12184
-      m_ExpandedIDs: 7ad0ffff9adaffffeedfffff5ae6ffff7aecffffbcf1ffff8af6ffff66fbffff
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 1674feffb074feffba74feffbe74feffd874feffea74feff2ccaffff60caffff5accffff6cccffff56dfffff9ce0ffffd2e0ffffd4e2fffffcf7ffff30f8ffff4efaffff62faffff76fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -672,20 +672,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Resources
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Resources
   m_LastFoldersGridSize: -1
   m_LastProjectPath: "C:\\Users\\balaz\\OneDrive\\Asztali g\xE9p\\EKE\\Szakdoga\\Szakdolgozat"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 7c300000
-    m_LastClickedID: 12412
-    m_ExpandedIDs: 000000007c3000006e3100001c3200004e3200008a330000e63300002a3400003e340000103500007e350000ba3500002036000000ca9a3b
+    m_SelectedIDs: 88330000
+    m_LastClickedID: 13192
+    m_ExpandedIDs: 0000000000300000fc300000b0310000e63100002633000088330000d0330000e4330000ba340000323500006e350000d635000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -713,7 +713,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000007c3000006e3100001c3200004e3200008a330000e63300002a3400003e340000103500007e350000ba35000020360000
+    m_ExpandedIDs: 0000000000300000fc300000b0310000e63100002633000088330000d0330000e4330000ba340000323500006e350000d6350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -823,7 +823,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 15392
+  m_LastSelectedObjectID: 70786
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52

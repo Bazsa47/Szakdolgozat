@@ -37,9 +37,7 @@ public class PlayerClass : Entity
         PhotonView.Find(viewID).gameObject.GetComponent<PlayerClass>().PlayerName = name;
     }
 
-    [SerializeField]
     private bool canTakeDmg = true;
-    [SerializeField]
     private float countdown = 3f;
     public override void TakeDmg(float newHp)
     {
@@ -64,9 +62,9 @@ public class PlayerClass : Entity
     [PunRPC]
     public void ManageHpBars(string name, float newHp)
     {
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
         {
-           if(PhotonNetwork.PlayerList[i].NickName == name)
+           if(PhotonNetwork.PlayerList[i].NickName.ToString() == name)
            {
                 Slider slider = gameObject.transform.Find("Camera").transform.Find("Canvas").transform.Find("UI").transform.Find(i ==0 ? "HpBar" : "HpBar (" + i+")").GetComponent<Slider>();
                 slider.value = newHp;
@@ -114,15 +112,10 @@ public class PlayerClass : Entity
 
     public override void Die()
     {
-        PhotonNetwork.AutomaticallySyncScene = true;
-        this.GetComponent<PhotonView>().RPC("ChangeScene", RpcTarget.All);
+        gameObject.transform.Find("Camera").transform.Find("Canvas").transform.Find("UI").transform.Find("DeathPanel").gameObject.SetActive(true);
+        GetComponent<player_movement>().enabled = false;
+        gameObject.transform.Find("Weapons").GetComponent<AttackController>().enabled = false; ;
+        Cursor.visible = true;
     }
 
-    [PunRPC]
-    public void ChangeScene()
-    {
-        if(PhotonNetwork.IsMasterClient){
-            PhotonNetwork.LoadLevel(0);
-        }
-    }
 }
