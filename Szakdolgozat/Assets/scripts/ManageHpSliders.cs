@@ -7,47 +7,33 @@ using TMPro;
 public class ManageHpSliders : MonoBehaviour
 {
     public List<GameObject> sliders = new List<GameObject>();
-    void Start()
+    void Awake()
     {
 
-        switch (PhotonNetwork.PlayerList.Length)
+        for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
         {
-            case 1:
-                sliders[0].SetActive(true);
-                sliders[0].transform.Find("PlayerName").GetComponent<TextMeshProUGUI>().SetText(PhotonNetwork.PlayerList[0].NickName);
+            if (PhotonNetwork.PlayerList[i].IsLocal)
+            {
+                GetComponent<PhotonView>().RPC("RpcSetBar",RpcTarget.All,i);
                 break;
-            case 2:
-                sliders[0].SetActive(true);
-                sliders[0].transform.Find("PlayerName").GetComponent<TextMeshProUGUI>().SetText(PhotonNetwork.PlayerList[0].NickName);
-                sliders[1].SetActive(true);
-                sliders[1].transform.Find("PlayerName").GetComponent<TextMeshProUGUI>().SetText(PhotonNetwork.PlayerList[1].NickName);
-                break;
-            case 3:
-                sliders[0].SetActive(true);
-                sliders[0].transform.Find("PlayerName").GetComponent<TextMeshProUGUI>().SetText(PhotonNetwork.PlayerList[0].NickName);
-                sliders[1].SetActive(true);
-                sliders[1].transform.Find("PlayerName").GetComponent<TextMeshProUGUI>().SetText(PhotonNetwork.PlayerList[1].NickName);
-                sliders[2].SetActive(true);
-                sliders[2].transform.Find("PlayerName").GetComponent<TextMeshProUGUI>().SetText(PhotonNetwork.PlayerList[2].NickName);
-                break;
-            case 4:
-                sliders[0].SetActive(true);
-                sliders[0].transform.Find("PlayerName").GetComponent<TextMeshProUGUI>().SetText(PhotonNetwork.PlayerList[0].NickName);
-                sliders[1].SetActive(true);
-                sliders[1].transform.Find("PlayerName").GetComponent<TextMeshProUGUI>().SetText(PhotonNetwork.PlayerList[1].NickName);
-                sliders[2].SetActive(true);
-                sliders[2].transform.Find("PlayerName").GetComponent<TextMeshProUGUI>().SetText(PhotonNetwork.PlayerList[2].NickName);
-                sliders[3].SetActive(true);
-                sliders[3].transform.Find("PlayerName").GetComponent<TextMeshProUGUI>().SetText(PhotonNetwork.PlayerList[3].NickName);
-                break;
-            default:
-                break;
+            }
+            else
+            {
+                sliders[i].SetActive(false);
+            }
+            
         }
+
     }
 
-    // Update is called once per frame
-    void Update()
+
+
+    [PunRPC]
+    public void RpcSetBar(int i)
     {
-        
+        sliders[i].SetActive(true);
+        sliders[i].transform.Find("PlayerName").GetComponent<TextMeshProUGUI>().SetText(PhotonNetwork.PlayerList[i].NickName);
+        Debug.Log("Set the " + i + ". slider. by: " + PhotonNetwork.PlayerList[i].NickName);
     }
+
 }

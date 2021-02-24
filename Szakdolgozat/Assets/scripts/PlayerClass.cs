@@ -21,6 +21,8 @@ public class PlayerClass : Entity
         set => playerName = value;
     }
 
+    private bool canTakeDmg = true;
+    private float countdown = 3f;
     void Awake()
     {
         if (this.GetComponent<PhotonView>().IsMine)
@@ -30,26 +32,10 @@ public class PlayerClass : Entity
         }
 
     }
-
-    [PunRPC]
-    public void SetNames(int viewID, string name)
-    {
-        PhotonView.Find(viewID).gameObject.GetComponent<PlayerClass>().PlayerName = name;
-    }
-
-    private bool canTakeDmg = true;
-    private float countdown = 3f;
-    public override void TakeDmg(float newHp)
-    {
-        Debug.Log("Dmg taken. HP:" + gameObject.GetComponent<PlayerClass>().Hp);
-        this.GetComponent<PhotonView>().RPC("TakeDmgRPC", RpcTarget.All, this.GetComponent<PhotonView>().ViewID, newHp);       
-    }
-
     private void Update()
     {
         if (canTakeDmg == false)
         {
-            Debug.Log("asd");
             countdown -= Time.deltaTime;
             if (countdown <= 0f)
             {
@@ -60,41 +46,15 @@ public class PlayerClass : Entity
     }
 
     [PunRPC]
-    public void ManageHpBars(string name, float newHp)
+    public void SetNames(int viewID, string name)
     {
-        for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
-        {
-           if(PhotonNetwork.PlayerList[i].NickName.ToString() == name)
-           {
-                Slider slider = gameObject.transform.Find("Camera").transform.Find("Canvas").transform.Find("UI").transform.Find(i ==0 ? "HpBar" : "HpBar (" + i+")").GetComponent<Slider>();
-                slider.value = newHp;
-                break;
-            }
-        }
-        //string name1 = gameObject.transform.Find("Camera").transform.Find("Canvas").transform.Find("UI").transform.Find("HpBar").transform.Find("PlayerName").GetComponent<TextMeshProUGUI>().text;
-        //string name2 = gameObject.transform.Find("Camera").transform.Find("Canvas").transform.Find("UI").transform.Find("HpBar (1)").transform.Find("PlayerName").GetComponent<TextMeshProUGUI>().text;
-        //string name3 = gameObject.transform.Find("Camera").transform.Find("Canvas").transform.Find("UI").transform.Find("HpBar (2)").transform.Find("PlayerName").GetComponent<TextMeshProUGUI>().text;
-        //string name4 = gameObject.transform.Find("Camera").transform.Find("Canvas").transform.Find("UI").transform.Find("HpBar (3)").transform.Find("PlayerName").GetComponent<TextMeshProUGUI>().text;
-        //if (name == name1)
-        //{
-        //    Slider slider = transform.Find("Camera").transform.Find("Canvas").transform.Find("UI").transform.Find("HpBar").GetComponent<Slider>();
-        //    slider.value = newHp;
-        //}
-        //else if (name == name2)
-        //{
-        //    Slider slider = transform.Find("Camera").transform.Find("Canvas").transform.Find("UI").transform.Find("HpBar (1)").GetComponent<Slider>();
-        //    slider.value = newHp;
-        //}
-        //else if (name == name3)
-        //{
-        //    Slider slider = transform.Find("Camera").transform.Find("Canvas").transform.Find("UI").transform.Find("HpBar (2)").GetComponent<Slider>();
-        //    slider.value = newHp;
-        //}
-        //else if (name == name4)
-        //{
-        //    Slider slider = transform.Find("Camera").transform.Find("Canvas").transform.Find("UI").transform.Find("HpBar (3)").GetComponent<Slider>();
-        //    slider.value = newHp;
-        //}
+        PhotonView.Find(viewID).gameObject.GetComponent<PlayerClass>().PlayerName = name;
+    }
+
+    public override void TakeDmg(float newHp)
+    {
+        this.GetComponent<PhotonView>().RPC("ManageHpBars", RpcTarget.All, this.playerName, newHp);
+        this.GetComponent<PhotonView>().RPC("TakeDmgRPC", RpcTarget.All, this.GetComponent<PhotonView>().ViewID, newHp);
     }
 
     [PunRPC]
@@ -102,19 +62,46 @@ public class PlayerClass : Entity
     {
         if (canTakeDmg == true)
         {
-            canTakeDmg = false;
-            Debug.Log("Rpc called. hp: " + gameObject.GetComponent<PlayerClass>().Hp);
             PhotonView.Find(viewID).gameObject.GetComponent<PlayerClass>().Hp = newHp;
-            Debug.Log("HP subtracted: " + gameObject.GetComponent<PlayerClass>().Hp);
-            this.GetComponent<PhotonView>().RPC("ManageHpBars", RpcTarget.All, this.playerName, newHp);
+            canTakeDmg = false;
         }
     }
 
+    [PunRPC]
+    public void ManageHpBars(string name, float newHp)
+    {
+        if(canTakeDmg)
+        for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
+        {
+           if(PhotonNetwork.PlayerList[i].NickName.ToString() == name)
+           {
+                string barName = "HpBar";
+                if (i > 0) 
+                    barName += " (" + i + ")";
+                    
+                for (int j = 1; j <= PhotonNetwork.PlayerList.Length; j++){
+                    PhotonView.Find(int.Parse(j + "002")).gameObject.transform.Find("Camera").transform.Find("Canvas").transform.Find("UI").transform.Find(barName).GetComponent<Slider>().value = newHp;
+                }
+                break;
+           }
+        }
+    }
+  
+
     public override void Die()
+    {
+        if (canTakeDmg)
+        {
+            GetComponent<PhotonView>().RPC("DieRpc",RpcTarget.All);
+        }
+    }
+
+    [PunRPC]
+    public void DieRpc()
     {
         gameObject.transform.Find("Camera").transform.Find("Canvas").transform.Find("UI").transform.Find("DeathPanel").gameObject.SetActive(true);
         GetComponent<player_movement>().enabled = false;
-        gameObject.transform.Find("Weapons").GetComponent<AttackController>().enabled = false; ;
+        gameObject.transform.Find("Weapons").GetComponent<AttackController>().enabled = false;
         Cursor.visible = true;
     }
 
