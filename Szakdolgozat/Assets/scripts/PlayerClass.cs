@@ -92,7 +92,11 @@ public class PlayerClass : Entity
     {
         if (canTakeDmg)
         {
-            GetComponent<PhotonView>().RPC("DieRpc",RpcTarget.All);
+           // GetComponent<PhotonView>().RPC("DieRpc",RpcTarget.All);
+            for (int j = 1; j <= PhotonNetwork.PlayerList.Length; j++)
+            {
+                PhotonView.Find(int.Parse(j + "002")).RPC("DieRpc", RpcTarget.All);
+            }
         }
     }
 
