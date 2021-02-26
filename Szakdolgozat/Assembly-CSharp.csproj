@@ -64,8 +64,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\collisintestscript.cs" />
+    <Compile Include="Assets\DealDMGEnemy.cs" />
     <Compile Include="Assets\DeathScreenmanager.cs" />
-    <Compile Include="Assets\dmgTakeTest.cs" />
     <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
     <Compile Include="Assets\player_movement.cs" />
     <Compile Include="Assets\Prefabs\UI\Rooms\CreateOrJoinRoomCanvas.cs" />

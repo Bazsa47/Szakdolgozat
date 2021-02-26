@@ -345,6 +345,34 @@ Transform:
   m_Father: {fileID: 3597692789238709414}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &8480379322996744964
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4253382157810663471}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &29563679316854615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4253382157810663471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21e926848f317e247b5c6752f826e7a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4502461169367052245
 GameObject:
   m_ObjectHideFlags: 0
@@ -1173,16 +1201,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sword_classic
       objectReference: {fileID: 0}
-    - target: {fileID: 3080174007894130955, guid: bf6d8c70d0457c6439cd9930ce3deb64,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3080174007894130955, guid: bf6d8c70d0457c6439cd9930ce3deb64,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4043649310325312, guid: bf6d8c70d0457c6439cd9930ce3deb64, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.66
@@ -1239,11 +1257,27 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1399055
       objectReference: {fileID: 0}
+    - target: {fileID: 3080174007894130955, guid: bf6d8c70d0457c6439cd9930ce3deb64,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3080174007894130955, guid: bf6d8c70d0457c6439cd9930ce3deb64,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf6d8c70d0457c6439cd9930ce3deb64, type: 3}
 --- !u!4 &4255156659982015051 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4043649310325312, guid: bf6d8c70d0457c6439cd9930ce3deb64,
+    type: 3}
+  m_PrefabInstance: {fileID: 4252251005210681355}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4253382157810663471 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1138316777578532, guid: bf6d8c70d0457c6439cd9930ce3deb64,
     type: 3}
   m_PrefabInstance: {fileID: 4252251005210681355}
   m_PrefabAsset: {fileID: 0}

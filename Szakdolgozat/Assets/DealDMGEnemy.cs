@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class dmgTakeTest : MonoBehaviour
+public class DealDMGEnemy : MonoBehaviour
 {
     float dmg = 50;
     private void OnTriggerEnter(Collider other)
