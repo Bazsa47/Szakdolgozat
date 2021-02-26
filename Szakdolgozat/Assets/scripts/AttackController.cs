@@ -37,7 +37,7 @@ public class AttackController : MonoBehaviour
                 weaponCollider[currentWeaponIndex].enabled = true;
             else
             {
-                PhotonNetwork.Instantiate("fireball",player.position, this.transform.rotation);
+                PhotonNetwork.Instantiate("fireball",PhotonView.Find(WeaponsPV.ViewID).transform.Find("Wand_").transform.Find("Wand").transform.Find("Weapon-Wand").transform.Find("FireFromHere").transform.position, this.transform.rotation);
             }
         }
 
