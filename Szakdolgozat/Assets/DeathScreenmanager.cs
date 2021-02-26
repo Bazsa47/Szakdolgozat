@@ -5,6 +5,7 @@ using Photon.Pun;
 
 public class DeathScreenmanager : MonoBehaviour
 {
+    public PhotonView pv;
     public void ExitGame()
     {
         Application.Quit();
@@ -17,10 +18,17 @@ public class DeathScreenmanager : MonoBehaviour
 
     public void Retry()
     {
-        if (PhotonNetwork.LocalPlayer.IsMasterClient)
-        {
+        if (PhotonNetwork.LocalPlayer.IsMasterClient) { 
+
             PhotonNetwork.AutomaticallySyncScene = true;
-            PhotonNetwork.LoadLevel("Arena");
+           pv.RPC("RetryRPC",RpcTarget.All);
+           
         }
+    }
+
+    [PunRPC]
+    public void RetryRPC()
+    {
+        PhotonNetwork.LoadLevel("Arena");
     }
 }

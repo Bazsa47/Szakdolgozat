@@ -78,9 +78,14 @@ public class PlayerClass : Entity
                 string barName = "HpBar";
                 if (i > 0) 
                     barName += " (" + i + ")";
-                    
-                for (int j = 1; j <= PhotonNetwork.PlayerList.Length; j++){
-                    PhotonView.Find(int.Parse(j + "002")).gameObject.transform.Find("Camera").transform.Find("Canvas").transform.Find("UI").transform.Find(barName).GetComponent<Slider>().value = newHp;
+                 GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+                for (int j = 1; j <= players.Length; j++)
+                {
+                  Slider s = players[j-1].gameObject.transform.Find("Camera").transform.Find("Canvas").transform.Find("UI").transform.Find(barName).GetComponent<Slider>();
+                        if (s != null)
+                        {
+                            s.value = newHp;
+                        }
                 }
                 break;
            }
