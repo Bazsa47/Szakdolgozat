@@ -413,7 +413,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: aec5ffff50cfffff32dbffff36dbffff3edbffff7edcffff90dcffffe0ecffffe4ecffff2aedffffaaf0ffff6af9ffff76fbffff0a3d0000743d0000
+      m_ExpandedIDs: 40f5ffff5af6ffff90f6ffffa6f8ffff04f9ffffb2faffff76fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -850,7 +850,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 15416
+  m_LastSelectedObjectID: 15394
 --- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
