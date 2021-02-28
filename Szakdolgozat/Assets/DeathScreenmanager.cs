@@ -13,6 +13,8 @@ public class DeathScreenmanager : MonoBehaviour
 
     public void MainMenu()
     {
+        if(PhotonNetwork.InLobby) PhotonNetwork.LeaveLobby();
+        if(PhotonNetwork.InRoom) PhotonNetwork.LeaveRoom();
         PhotonNetwork.LoadLevel("Rooms");
     }
 

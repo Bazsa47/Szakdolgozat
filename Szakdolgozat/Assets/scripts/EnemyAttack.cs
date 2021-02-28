@@ -11,7 +11,7 @@ public class EnemyAttack : MonoBehaviour
     public Animation swordSwing;
     void Start()
     {
-       // target = GetComponent<EnemyClass>().Target; 
+        target = GetComponent<EnemyClass>().Target; 
     }
 
     // Update is called once per frame

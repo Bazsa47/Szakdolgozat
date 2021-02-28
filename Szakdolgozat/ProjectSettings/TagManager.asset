@@ -6,6 +6,7 @@ TagManager:
   tags:
   - weapon
   - enemy
+  - Nexus
   layers:
   - Default
   - TransparentFX

@@ -35,4 +35,9 @@ public class EnemyClass : Entity
     {
         PhotonView.Find(viewID).gameObject.GetComponent<EnemyClass>().Hp = newHp;
     }
+
+    void Awake()
+    {
+        this.target = GameObject.FindGameObjectWithTag("Player").transform;
+    }
 }

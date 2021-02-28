@@ -12,6 +12,7 @@ public class player_movement : MonoBehaviour
     public float smooth = 0.1f;
     float turnSmoothVelocity;
     public Transform cam;
+    float gravity=0;
     void Start()
     {
         PV = GetComponent<PhotonView>();
@@ -25,7 +26,8 @@ public class player_movement : MonoBehaviour
             float horizontal = Input.GetAxisRaw("Horizontal");
             float vertical = Input.GetAxisRaw("Vertical");
 
-            Vector3 direction = new Vector3(horizontal, 0, vertical).normalized;
+
+            Vector3 direction = new Vector3(horizontal, gravity, vertical).normalized;
 
             if (direction.magnitude >= 0.1f)
             {
@@ -34,7 +36,7 @@ public class player_movement : MonoBehaviour
                 transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
                 Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-                controller.Move(moveDir.normalized * playerClass.Speed * Time.deltaTime);
+                controller.SimpleMove(moveDir * playerClass.Speed );
             }
 
             //gameObject.transform.rotation = new Quaternion(gameObject.transform.rotation.x,cam.transform.rotation.y, gameObject.transform.rotation.z,1);
