@@ -98,11 +98,13 @@ public class PlayerClass : Entity
         if (canTakeDmg)
         {
             //ezt át kell írni
-           // GetComponent<PhotonView>().RPC("DieRpc",RpcTarget.All);
-            for (int j = 1; j <= PhotonNetwork.PlayerList.Length; j++)
+            // GetComponent<PhotonView>().RPC("DieRpc",RpcTarget.All);
+            GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+            for (int i = 0; i < players.Length; i++)
             {
-                PhotonView.Find(int.Parse(j + "002")).RPC("DieRpc", RpcTarget.All);
+                players[i].GetComponent<PhotonView>().RPC("DieRpc", RpcTarget.All);
             }
+
         }
     }
 

@@ -48,6 +48,8 @@ MonoBehaviour:
   - RpcSetBar
   - DieRpc
   - RetryRPC
+  - TakeNexusDmgRPC
+  - GameOver
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

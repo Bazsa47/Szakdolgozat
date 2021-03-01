@@ -5,7 +5,13 @@ using UnityEngine;
 
 public class DealDMGEnemy : MonoBehaviour
 {
-    float dmg = 50;
+
+    public EnemyClass enemy;
+    private float dmg;
+    void Start()
+    {
+        dmg = enemy.Dmg;
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -20,6 +26,9 @@ public class DealDMGEnemy : MonoBehaviour
             else
                 other.gameObject.GetComponent<PlayerClass>().TakeDmg(newHp);
 
+        }else if (other.CompareTag("Nexus"))
+        {
+            other.GetComponent<Nexus>().TakeDmg(dmg);
         }
 
     }

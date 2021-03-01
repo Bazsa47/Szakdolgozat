@@ -38,6 +38,6 @@ public class EnemyClass : Entity
 
     void Awake()
     {
-        this.target = GameObject.FindGameObjectWithTag("Player").transform;
+        this.target = GameObject.FindGameObjectWithTag("Nexus").transform;
     }
 }

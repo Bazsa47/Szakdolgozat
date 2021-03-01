@@ -95,6 +95,7 @@
     <Compile Include="Assets\scripts\Managers\MasterManager.cs" />
     <Compile Include="Assets\scripts\Managers\PhotonPlayer.cs" />
     <Compile Include="Assets\scripts\Managers\SingletonScriptableObject.cs" />
+    <Compile Include="Assets\scripts\Nexus.cs" />
     <Compile Include="Assets\scripts\PlayerClass.cs" />
     <Compile Include="Assets\scripts\Projectile.cs" />
     <Compile Include="Assets\scripts\SingletonReferences.cs" />
