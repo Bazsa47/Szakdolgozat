@@ -20,12 +20,16 @@ public class WaveManager : MonoBehaviour
 
     public void SpawnEnemies()
     {
-        enemyNum = maxEnemy;
-        for (int i = 0; i < maxEnemy; i++)
+        if (PhotonNetwork.LocalPlayer.IsMasterClient)
         {
-            GameObject enemy = PhotonNetwork.InstantiateSceneObject("Enemy", enemySpawnpoints[i].transform.position, Quaternion.identity, 0);
-            enemy.gameObject.GetComponent<EnemyClass>().Hp = 140f + wave * 10f * multiplierByPlayerNum;
+            enemyNum = maxEnemy;
+            for (int i = 0; i < maxEnemy; i++)
+            {
+                GameObject enemy = PhotonNetwork.InstantiateSceneObject("Enemy", enemySpawnpoints[i].transform.position, Quaternion.identity, 0);
+                enemy.gameObject.GetComponent<EnemyClass>().Hp = 140f + wave * 10f * multiplierByPlayerNum;
+            }
         }
+
     }
 
     public void StartNewWave()
@@ -40,7 +44,7 @@ public class WaveManager : MonoBehaviour
         //ha új wave, akkor várunk egy kicsit, pár mp
         //kinyitjuk az ajtót
         //lespawnoljuk az új enemiket
-        maxEnemy++;
+        if(maxEnemy <= 40 ) maxEnemy++;
         SpawnEnemies();
         //becsukjuk az ajtót
     }
