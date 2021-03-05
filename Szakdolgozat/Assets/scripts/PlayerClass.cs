@@ -97,8 +97,6 @@ public class PlayerClass : Entity
     {
         if (canTakeDmg)
         {
-            //ezt át kell írni
-            // GetComponent<PhotonView>().RPC("DieRpc",RpcTarget.All);
             GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
             for (int i = 0; i < players.Length; i++)
             {

@@ -23,6 +23,12 @@ public class EnemyClass : Entity
     {
         if(PhotonView.Find(viewID).IsMine)
             PhotonNetwork.Destroy(PhotonView.Find(viewID).gameObject);
+
+        GameObject.FindGameObjectWithTag("wavemanager").GetComponent<WaveManager>().enemyNum--;
+        if (GameObject.FindGameObjectWithTag("wavemanager").GetComponent<WaveManager>().enemyNum <= 0)
+        {
+            GameObject.FindGameObjectWithTag("wavemanager").GetComponent<WaveManager>().StartNewWave();
+        }
     }
 
     public override void TakeDmg(float newHp)
