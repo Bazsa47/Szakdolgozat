@@ -21,13 +21,13 @@ public class Projectile : MonoBehaviour
 
         if (countdown <= 0 && !exploded)
         {
-            PV.RPC("DestroyFireball",RpcTarget.All,PV.ViewID);
+            PV.RPC("DestroyFireballs",RpcTarget.All,PV.ViewID);
             exploded = true;
         }
     }
 
     [PunRPC]
-    void DestroyFireball(int viewId)
+    void DestroyFireballs(int viewId)
     {
         if (PhotonView.Find(viewId).IsMine)
         {

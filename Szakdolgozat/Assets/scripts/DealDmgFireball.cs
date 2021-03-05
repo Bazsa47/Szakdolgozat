@@ -10,7 +10,7 @@ public class DealDmgFireball : MonoBehaviour
     {
         if (other.CompareTag("enemy"))
         {
-            GetComponent<PhotonView>().RPC("DestroyFireball",RpcTarget.All);
+            GetComponent<PhotonView>().RPC("DestroyFireball",RpcTarget.All, GetComponent<PhotonView>().ViewID);
             float hp = other.gameObject.GetComponent<EnemyClass>().Hp;
             float newHp = hp - 30;
             if (newHp <= 0f)
@@ -21,18 +21,17 @@ public class DealDmgFireball : MonoBehaviour
         else if(!other.CompareTag("Player"))
         {
             GameObject explosion = PhotonNetwork.Instantiate("Explosion", this.gameObject.transform.position, Quaternion.identity);
-            PhotonNetwork.Destroy(GetComponent<PhotonView>().transform.parent.gameObject);
+            GetComponent<PhotonView>().RPC("DestroyFireball", RpcTarget.All, GetComponent<PhotonView>().ViewID);
         }
     }
 
     [PunRPC]
-    public void DestroyFireball()
+    public void DestroyFireball(int viewId)
     {
-        if (GetComponent<PhotonView>().IsMine)
+        if (PhotonView.Find(viewId).IsMine)
         {
             GameObject explosion = PhotonNetwork.Instantiate("Explosion", this.gameObject.transform.position, Quaternion.identity);
-            PhotonNetwork.Destroy(GetComponent<PhotonView>().transform.parent.gameObject);
-           
+            PhotonNetwork.Destroy(PhotonView.Find(viewId).transform.parent.gameObject);          
         }
     }
 }
