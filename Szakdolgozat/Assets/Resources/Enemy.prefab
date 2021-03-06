@@ -1225,6 +1225,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sword_classic
       objectReference: {fileID: 0}
+    - target: {fileID: 3080174007894130955, guid: bf6d8c70d0457c6439cd9930ce3deb64,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3080174007894130955, guid: bf6d8c70d0457c6439cd9930ce3deb64,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4043649310325312, guid: bf6d8c70d0457c6439cd9930ce3deb64, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.66
@@ -1280,16 +1290,6 @@ PrefabInstance:
     - target: {fileID: 4043649310325312, guid: bf6d8c70d0457c6439cd9930ce3deb64, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.1399055
-      objectReference: {fileID: 0}
-    - target: {fileID: 3080174007894130955, guid: bf6d8c70d0457c6439cd9930ce3deb64,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3080174007894130955, guid: bf6d8c70d0457c6439cd9930ce3deb64,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf6d8c70d0457c6439cd9930ce3deb64, type: 3}

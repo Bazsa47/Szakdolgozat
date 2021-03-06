@@ -27,7 +27,7 @@ public class EnemyClass : Entity
         GameObject.FindGameObjectWithTag("wavemanager").GetComponent<WaveManager>().enemyNum--;
         if (GameObject.FindGameObjectWithTag("wavemanager").GetComponent<WaveManager>().enemyNum <= 0)
         {
-            GameObject.FindGameObjectWithTag("wavemanager").GetComponent<WaveManager>().StartNewWave();
+            GameObject.FindGameObjectWithTag("wavemanager").GetComponent<WaveManager>().StartNextWave();
         }
     }
 
