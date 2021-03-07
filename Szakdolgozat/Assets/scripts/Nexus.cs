@@ -9,6 +9,37 @@ public class Nexus : MonoBehaviour
     [SerializeField]
     private float hp;
 
+    void Start()
+    {
+        InvokeRepeating("HealthRegen", 1f, 1f);
+    }
+    void HealthRegen()
+    {
+        GetComponent<PhotonView>().RPC("RegenerateHealth", RpcTarget.All);
+    }
+
+    [PunRPC]
+    public void RegenerateHealth()
+    {
+        if (GetComponent<Nexus>().hp < 1000)
+        {
+            float newHp = GetComponent<Nexus>().hp + 10;
+            if (newHp > 1000)
+                newHp = 1000;
+            this.GetComponent<Nexus>().hp = newHp;
+        }
+        
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        for (int i = 0; i < players.Length; i++)
+        {
+            Slider s = players[i].gameObject.transform.Find("Camera").transform.Find("Canvas").transform.Find("UI").transform.Find("NexusHpBar").GetComponent<Slider>();
+            if (s != null)
+            {
+                s.value = GetComponent<Nexus>().hp;
+            }
+        }
+    }
+
     public void TakeDmg(float dmg)
     {
         float newhp = hp - dmg;

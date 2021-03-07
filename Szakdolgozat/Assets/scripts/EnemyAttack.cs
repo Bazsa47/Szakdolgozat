@@ -31,14 +31,14 @@ public class EnemyAttack : MonoBehaviour
             //attack
             if (!swordSwing.isPlaying)
             {
-                swordCollider.enabled = true;
+                swordCollider.enabled = false;
                 swordSwing.Play();
             }
         }
 
-        if (!swordSwing.isPlaying)
+        if (swordSwing.isPlaying)
         {
-            swordCollider.enabled = false;
+            swordCollider.enabled = true;
         }
     }
 }

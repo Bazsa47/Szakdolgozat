@@ -53,6 +53,7 @@ MonoBehaviour:
   - IncreaseWave
   - IncreaseWaves
   - DestroyFireballs
+  - RegenerateHealth
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

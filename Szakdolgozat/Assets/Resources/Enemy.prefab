@@ -649,6 +649,7 @@ MonoBehaviour:
   target: {fileID: 3597692789238709414, guid: 4d36f1225c7301c4eae1cc9310b230e1, type: 3}
   distance: 5
   swordSwing: {fileID: 3183911527065849751}
+  swordCollider: {fileID: 1278457361413611776}
 --- !u!114 &793246698094822794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1302,6 +1303,12 @@ GameObject:
 --- !u!4 &4255156659982015051 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4043649310325312, guid: bf6d8c70d0457c6439cd9930ce3deb64,
+    type: 3}
+  m_PrefabInstance: {fileID: 4252251005210681355}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1278457361413611776 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 3080174007894130955, guid: bf6d8c70d0457c6439cd9930ce3deb64,
     type: 3}
   m_PrefabInstance: {fileID: 4252251005210681355}
   m_PrefabAsset: {fileID: 0}
