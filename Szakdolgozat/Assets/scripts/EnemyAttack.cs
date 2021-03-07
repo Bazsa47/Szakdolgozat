@@ -9,6 +9,8 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField]
     private float distance;
     public Animation swordSwing;
+
+    public Collider swordCollider;
     void Start()
     {
         target = GetComponent<EnemyClass>().Target; 
@@ -29,8 +31,14 @@ public class EnemyAttack : MonoBehaviour
             //attack
             if (!swordSwing.isPlaying)
             {
+                swordCollider.enabled = true;
                 swordSwing.Play();
             }
+        }
+
+        if (!swordSwing.isPlaying)
+        {
+            swordCollider.enabled = false;
         }
     }
 }
