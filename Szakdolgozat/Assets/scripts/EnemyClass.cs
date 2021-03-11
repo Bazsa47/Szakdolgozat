@@ -44,6 +44,6 @@ public class EnemyClass : Entity
 
     void Awake()
     {
-        this.target = GameObject.FindGameObjectWithTag("Nexus").transform;
+        this.Target = GameObject.FindGameObjectWithTag("Nexus").transform;
     }
 }

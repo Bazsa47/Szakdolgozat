@@ -80,6 +80,7 @@
     <Compile Include="Assets\PUN2_RigidbodySync.cs" />
     <Compile Include="Assets\Pun2Player.cs" />
     <Compile Include="Assets\scripts\AttackController.cs" />
+    <Compile Include="Assets\scripts\ChangeTarget.cs" />
     <Compile Include="Assets\scripts\DamageEnemy.cs" />
     <Compile Include="Assets\scripts\DealDmg.cs" />
     <Compile Include="Assets\scripts\DealDmgFireball.cs" />

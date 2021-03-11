@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.1)  7 MAR 2021 20:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.1)  9 MAR 2021 18:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -587,32 +587,62 @@ Package pdftex.def Info: eszterhazy-logo-hu.pdf  used on input line 21.
 
 ] [3
 
+] [4
+
 ]
 1. fejezet.
-[4
+[5
 
-] [5
+]
+2. fejezet.
+[6
+
+]
+3. fejezet.
+[7
+
+]
+4. fejezet.
+[8
+
+]
+
+LaTeX Warning: Empty `thebibliography' environment on input line 34.
+
+[9
 
 ] (./Szakdolgozat.aux)
-Package rerunfilecheck Info: File `Szakdolgozat.out' has not changed.
-(rerunfilecheck)             Checksum: 3A760E8820F7B16838290750F15BA338;450.
+
+Package rerunfilecheck Warning: File `Szakdolgozat.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Szakdolgozat.out':
+(rerunfilecheck)             Before: C35DC78936BE38C1533628657BA2E59C;453
+(rerunfilecheck)             After:  F0D21018F6B35983B19505A4D9ADE6DF;645.
  ) 
 Here is how much of TeX's memory you used:
- 12717 strings out of 479023
- 189737 string characters out of 5863351
- 524797 words of memory out of 5000000
- 29917 multiletter control sequences out of 15000+600000
- 463034 words of font info for 75 fonts, out of 8000000 for 9000
+ 12709 strings out of 479023
+ 189591 string characters out of 5863351
+ 522797 words of memory out of 5000000
+ 29911 multiletter control sequences out of 15000+600000
+ 449964 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 86i,7n,88p,810b,383s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}<c:/texlive/2020/tex
-mf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2020/texmf-dist/fonts/type
-1/public/lm/lmcsc10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr12
-.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/lm/lmri12.pfb>
-Output written on Szakdolgozat.pdf (5 pages, 117693 bytes).
+ 86i,7n,88p,302b,383s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{subsection.1.1.1} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.1.1} has been referenced but does not exist
+, replaced by a fixed one
+
+{c:/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}<c:/texlive/2020/texmf
+-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/
+public/lm/lmcsc10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr12.p
+fb>
+Output written on Szakdolgozat.pdf (9 pages, 97457 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
- 67 compressed objects within 1 object stream
- 17 named destinations out of 1000 (max. 500000)
+ 95 PDF objects out of 1000 (max. 8388607)
+ 74 compressed objects within 1 object stream
+ 20 named destinations out of 1000 (max. 500000)
  50 words of extra memory for PDF output out of 10000 (max. 10000000)
 

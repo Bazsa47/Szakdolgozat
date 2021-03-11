@@ -9,6 +9,8 @@ public class Nexus : MonoBehaviour
     [SerializeField]
     private float hp;
 
+    public float threat;
+
     void Start()
     {
         InvokeRepeating("HealthRegen", 1f, 1f);

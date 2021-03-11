@@ -421,6 +421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1000
+  threat: 0
 --- !u!114 &6537265482982731562
 MonoBehaviour:
   m_ObjectHideFlags: 0

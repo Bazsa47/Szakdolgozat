@@ -6,18 +6,15 @@ using UnityEngine.AI;
 public class EnemyMove : MonoBehaviour
 {
     private NavMeshAgent agent;
-    private Transform target;
+    public EnemyClass ec;
     void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
-        target = GetComponent<EnemyClass>().Target;
+        agent = GetComponent<NavMeshAgent>();        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (target == null)
-            target = GameObject.FindWithTag("Player").transform;
-        agent.SetDestination(target.position);
+        agent.SetDestination(ec.Target.position);
     }
 }
