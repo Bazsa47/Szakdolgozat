@@ -387,7 +387,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 7e34ffff1c53ffff5053ffff6c59ffff7e59ffff72a4ffffdaa5ffff10a6ffff30acffff42acffff16c8ffff78c8ffff70d3ffff76fbffff
+      m_ExpandedIDs: b2e7feff0ce9feff40e9feff60effeff72effeff820affffd80bffff0c0cffff2c12ffff3e12ffff522affffac2bffffe02bffff0032ffff1232ffff564effffac4fffffe04fffff0056ffff1256ffffda6bffffc879ffff227bffff567bffff7681ffff8881ffff5499ffffc09affff8e9bffffc49bffffe69dffff449efffff0a3ffff38c5ffff84c6ffffb8c6ffffd8ccffffeaccffffc8f1fffffef1ffff52f8ffff64f8ffff76fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -690,19 +690,19 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: "C:\\Users\\balaz\\OneDrive\\Asztali g\xE9p\\EKE\\Szakdoga\\Szakdolgozat"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 131}
-    m_SelectedIDs: b2390000
-    m_LastClickedID: 14770
+    scrollPos: {x: 0, y: 163}
+    m_SelectedIDs: 163b0000
+    m_LastClickedID: 15126
     m_ExpandedIDs: 0000000024310000403300001234000012350000643500005e3700001c390000b2390000163b0000723b0000ea3c0000ee3d00005a3e0000fa3e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -841,7 +841,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 21700
+  m_LastSelectedObjectID: 18140
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52

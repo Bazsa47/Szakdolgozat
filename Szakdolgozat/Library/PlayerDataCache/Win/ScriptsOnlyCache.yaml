@@ -1517,7 +1517,7 @@ ScriptsOnlyBuild:
     className: CinemachineVirtualCamera
   - hash:
       serializedVersion: 2
-      Hash: a5127d0b90a8c1fb71765be9938a9f4c
+      Hash: 95575a824d14cc7560286bc457d6220f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: WaveManager

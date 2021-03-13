@@ -9461,6 +9461,7 @@ MonoBehaviour:
   - {fileID: 2010196019}
   - {fileID: 1844940343}
   - {fileID: 98327497}
+  waitBetweenWaves: 10
 --- !u!65 &1856927344
 BoxCollider:
   m_ObjectHideFlags: 0

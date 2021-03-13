@@ -10,10 +10,11 @@ public class WaveManager : MonoBehaviour
     public int enemyNum;
     [SerializeField] private int maxEnemy;
     public GameObject[] enemySpawnpoints;
+    public float waitBetweenWaves;
 
     void Start()
     {
-
+        enemyNum = 5;
        for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++){
             multiplierByPlayerNum += 0.25f;
        }
@@ -31,7 +32,7 @@ public class WaveManager : MonoBehaviour
     {
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
 
-        //kiírjuk a canvasra h wave cleared (fadein, fadeout) TODO
+        //kiírjuk a canvasra (ha nem az első wave) h wave cleared (fadein, fadeout) TODO
         if (wave >= 1)
         {
             for (int i = 0; i < players.Length; i++)
@@ -41,7 +42,7 @@ public class WaveManager : MonoBehaviour
         }
 
         //ha új wave, akkor várunk egy kicsit, pár mp 
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(waitBetweenWaves);
 
         //növeljük a hullám számlálót.
         wave++; 
@@ -56,27 +57,19 @@ public class WaveManager : MonoBehaviour
         GameObject.Find("Gate Right").GetComponent<ManageGate>().OpenRightGate();
 
         //lespawnoljuk az új enemiket
-        if (maxEnemy <= 40) maxEnemy++;
         SpawnEnemies();
+        if (maxEnemy <= 40) maxEnemy++;
 
         //várunk egy kicsit, és becsukjuk az ajtót
         StartCoroutine("WaitForDoor");
 
-    }
-
-    public IEnumerator WaitForDoor()
-    {
-        yield return new WaitForSeconds(10);
-
-        GameObject.Find("Gate Left").GetComponent<ManageGate>().CloseLeftGate();
-        GameObject.Find("Gate Right").GetComponent<ManageGate>().CloseRightGate();
-    }
+    }  
 
     public void SpawnEnemies()
     {
+        enemyNum = maxEnemy;
         if (PhotonNetwork.LocalPlayer.IsMasterClient)
         {
-            enemyNum = maxEnemy;
             for (int i = 0; i < maxEnemy; i++)
             {
                 GameObject enemy = PhotonNetwork.InstantiateSceneObject("Enemy", enemySpawnpoints[i].transform.position, Quaternion.identity, 0);
@@ -89,6 +82,14 @@ public class WaveManager : MonoBehaviour
     public void IncreaseWaves(int wave)
     {
         gameObject.transform.Find("Camera").transform.Find("Canvas").transform.Find("UI").transform.Find("WaveCounter").GetComponent<TextMeshProUGUI>().SetText(wave.ToString());
+    }
+
+    public IEnumerator WaitForDoor()
+    {
+        yield return new WaitForSeconds(10);
+
+        GameObject.Find("Gate Left").GetComponent<ManageGate>().CloseLeftGate();
+        GameObject.Find("Gate Right").GetComponent<ManageGate>().CloseRightGate();
     }
 
 

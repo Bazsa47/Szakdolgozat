@@ -41,7 +41,15 @@ public class ChangeTarget : MonoBehaviour
 
     public void GenerateThreat(int viewId)
     {
-        float newThreat = 100;
+        float threat = 0;
+        for (int i = 0; i < threatList.Count; i++)
+        {
+            if (threatList[i].viewId == viewId)
+            {
+                threat = threatList[i].threat;
+            }
+        }
+        float newThreat = threat + 50;
         this.gameObject.GetComponent<PhotonView>().RPC("SetThreat",RpcTarget.All,viewId,newThreat);
     }
 
