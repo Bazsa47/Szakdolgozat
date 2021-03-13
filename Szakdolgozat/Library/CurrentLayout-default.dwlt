@@ -111,10 +111,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 731
-  m_MinSize: {x: 681, y: 494}
-  m_MaxSize: {x: 14004, y: 14044}
+  m_MinSize: {x: 679, y: 494}
+  m_MaxSize: {x: 14002, y: 14044}
   vertical: 0
-  controlID: 52
+  controlID: 129
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -247,7 +247,7 @@ MonoBehaviour:
   - {fileID: 18}
   - {fileID: 19}
   m_Selected: 0
-  m_LastSelected: 1
+  m_LastSelected: 2
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -387,7 +387,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: f822fdff2c29fdff3e34fdfffc49fdffba4bfdff245cfdff1c60fdffc479fdff427ffdff089afdff129afdff169afdff329afdff509efdff769ffdff98aefdffe607feff1c09feffbc0dfeffda55feff905cfeff4e5efeff2268feffea73feff5a79feffa084feff3ea0feff60bdfeffd2c3feffc2cefeff5ed4feff0008ffff2e17ffff1c22ffff6631ffff5a3cffffae43fffffa57ffffae5dffffbe68ffff1878ffffd679ffff0e84ffff3485ffff809affff3e9cffff10a7ffffb6b3ffff74b5ffff10e3ffffb6faffff76fbfffffe460000126400002074000068840000269600002aaa0000c0bb0000decb0000dae300007af50000def500001a320100ce9e01006cb20100a0b30100
+      m_ExpandedIDs: 58f6fefff4f6fefffef6feff02f7feff1ef7feff3cfbfeff8240ffffb640ffffa446ffffb646ffff36f2ffff76fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -447,9 +447,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -157.80975, y: -138.32524, z: -84.973274}
+    m_Target: {x: 470.00015, y: 262.15, z: -4.206554}
     speed: 2
-    m_Value: {x: -157.80975, y: -138.32524, z: -84.973274}
+    m_Value: {x: 470.00015, y: 262.15, z: -4.206554}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -478,13 +478,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.1791947, y: -0.7907317, z: 0.27965665, w: 0.51510835}
+    m_Target: {x: 0.03538251, y: -0.95404243, z: 0.26684576, w: 0.13511987}
     speed: 2
-    m_Value: {x: 0.17911306, y: -0.7903714, z: 0.2795292, w: 0.5148736}
+    m_Value: {x: 0.03536637, y: -0.95360726, z: 0.26672405, w: 0.13505824}
   m_Size:
-    m_Target: 252.83885
+    m_Target: 466.73657
     speed: 2
-    m_Value: 252.83885
+    m_Value: 466.73657
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -690,20 +690,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Animation
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Animation
   m_LastFoldersGridSize: -1
   m_LastProjectPath: "C:\\Users\\balaz\\OneDrive\\Asztali g\xE9p\\EKE\\Szakdoga\\Szakdolgozat"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 227}
-    m_SelectedIDs: 163b0000
-    m_LastClickedID: 15126
-    m_ExpandedIDs: 000000002431000040330000123400002434000012350000643500005e3700001c390000b2390000163b0000723b0000ea3c0000ee3d00005a3e0000fa3e000000ca9a3b
+    scrollPos: {x: 0, y: 31}
+    m_SelectedIDs: f2320000
+    m_LastClickedID: 13042
+    m_ExpandedIDs: 000000002631000042330000143400001435000066350000603700001e390000b4390000183b0000743b0000ec3c0000f03d00005c3e0000fc3e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -731,7 +731,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000024310000403300001234000012350000643500005e3700001c390000b2390000163b0000723b0000ea3c0000ee3d00005a3e0000fa3e0000
+    m_ExpandedIDs: 000000002631000042330000143400001435000066350000603700001e390000b4390000183b0000743b0000ec3c0000f03d00005c3e0000fc3e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -758,7 +758,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 00000000a41e0100ae510000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -836,12 +836,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 532
-    width: 1089
+    width: 1116
     height: 253
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 70926
+  m_LastSelectedObjectID: 13600
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
