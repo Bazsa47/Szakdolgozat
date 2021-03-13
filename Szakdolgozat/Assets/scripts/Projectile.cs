@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+    public int parent;
     Rigidbody fireball;
     public float countdown = 3;
     bool exploded = false;
