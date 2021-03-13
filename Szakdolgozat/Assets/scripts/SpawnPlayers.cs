@@ -20,7 +20,7 @@ public class SpawnPlayers : MonoBehaviour
                 break;
             }
         }
-        PhotonNetwork.Instantiate("Nexus", new Vector3(0.766728f, 2.39f, -27.94f), GameSetup.GS.spawnPoints[spawnPoint].rotation, 0);
+        PhotonNetwork.Instantiate("Nexus", new Vector3(0.766728f, 2.7f, -21.98f), GameSetup.GS.spawnPoints[spawnPoint].rotation, 0);
         PhotonNetwork.Instantiate("PhotonNetworkPlayer", GameSetup.GS.spawnPoints[index].position, GameSetup.GS.spawnPoints[spawnPoint].rotation, 0);
 
         //PhotonNetwork.InstantiateSceneObject("Enemy", enemySpawnpoints[0].transform.position, GameSetup.GS.spawnPoints[spawnPoint].rotation, 0);
