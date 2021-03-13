@@ -13,11 +13,12 @@ public class WaveManager : MonoBehaviour
 
     void Start()
     {
-        for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
-        {
+
+       for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++){
             multiplierByPlayerNum += 0.25f;
-        }
-        StartCoroutine("StartNewWave");
+       }
+       StartCoroutine("StartNewWave");        
+
     }
 
 

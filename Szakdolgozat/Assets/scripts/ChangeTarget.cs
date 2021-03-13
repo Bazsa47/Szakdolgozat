@@ -5,7 +5,6 @@ using Photon.Pun;
 
 public class ChangeTarget : MonoBehaviour
 {
-    public Transform test;
     private EnemyClass ec;
     private List<PlayerThreat> threatList;
     void Start()
@@ -40,6 +39,24 @@ public class ChangeTarget : MonoBehaviour
         ec.Target = ChooseMostDangerousPlayer();
     }
 
+    public void GenerateThreat(int viewId)
+    {
+        float newThreat = 100;
+        this.gameObject.GetComponent<PhotonView>().RPC("SetThreat",RpcTarget.All,viewId,newThreat);
+    }
+
+    [PunRPC]
+    public void SetThreat(int viewId, float newThreat)
+    {
+        for (int i = 0; i < threatList.Count; i++)
+        {
+            if (threatList[i].viewId == viewId)
+            {
+                threatList[i].threat = newThreat;
+                break;
+            }
+        }
+    }
     public Transform ChooseMostDangerousPlayer()
     {
         float max = -1;
@@ -56,11 +73,10 @@ public class ChangeTarget : MonoBehaviour
         return PhotonView.Find(threatList[index].viewId).gameObject.transform;
     }
 
-    private struct PlayerThreat
+    private class PlayerThreat
     {
 
         public int viewId;
-        [SerializeField]
         public float threat;
         public string playerName;
 

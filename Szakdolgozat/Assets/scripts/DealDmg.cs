@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class DealDmg : MonoBehaviour
 {
@@ -14,7 +15,11 @@ public class DealDmg : MonoBehaviour
             if (newHp <= 0f)
                 other.gameObject.GetComponent<EnemyClass>().Die();
             else
+            {
                 other.GetComponent<EnemyClass>().TakeDmg(newHp);
+                other.GetComponent<ChangeTarget>().GenerateThreat(playerClass.gameObject.GetComponent<PhotonView>().ViewID);
+            }
+
         }
     }
 }
