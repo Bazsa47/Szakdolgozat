@@ -31,6 +31,23 @@ public class ChangeTarget : MonoBehaviour
             PlayerThreat pt = new PlayerThreat(viewId,threat,playerName);
             threatList.Add(pt);
         }
+
+        InvokeRepeating("ThreatFade",1f,1f);
+    }
+
+    public void ThreatFade()
+    {
+        for (int i = 0; i < threatList.Count; i++)
+        {
+            if (!threatList[i].playerName.Equals("Nexus"))
+            {
+                float distance = Vector3.Distance(PhotonView.Find(threatList[i].viewId).gameObject.transform.position,this.transform.position);
+                float newThreat = threatList[i].threat - 1f - distance/2f;
+                if (newThreat <= 0)
+                    newThreat = 0;
+                this.gameObject.GetComponent<PhotonView>().RPC("SetThreat", RpcTarget.All, threatList[i].viewId, newThreat);
+            }          
+        }
     }
 
     void Update()
@@ -39,7 +56,7 @@ public class ChangeTarget : MonoBehaviour
         ec.Target = ChooseMostDangerousPlayer();
     }
 
-    public void GenerateThreat(int viewId)
+    public void GenerateThreat(int viewId, float distance, float weaponDmg)
     {
         float threat = 0;
         for (int i = 0; i < threatList.Count; i++)
@@ -49,7 +66,7 @@ public class ChangeTarget : MonoBehaviour
                 threat = threatList[i].threat;
             }
         }
-        float newThreat = threat + 50;
+        float newThreat = threat + (weaponDmg / distance);
         this.gameObject.GetComponent<PhotonView>().RPC("SetThreat",RpcTarget.All,viewId,newThreat);
     }
 
@@ -77,7 +94,7 @@ public class ChangeTarget : MonoBehaviour
                 index = i;
             }
         }
-        Debug.Log("Most Dangerous : " + threatList[index].playerName);
+        Debug.Log(GetComponent<PhotonView>().ViewID + " Most Dangerous : " + threatList[index].playerName + "Threat : " + threatList[index].threat);
         return PhotonView.Find(threatList[index].viewId).gameObject.transform;
     }
 

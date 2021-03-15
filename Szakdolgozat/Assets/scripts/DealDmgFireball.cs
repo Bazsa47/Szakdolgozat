@@ -18,7 +18,8 @@ public class DealDmgFireball : MonoBehaviour
             else
             {
                 other.GetComponent<EnemyClass>().TakeDmg(newHp);
-                other.GetComponent<ChangeTarget>().GenerateThreat(gameObject.GetComponent<Projectile>().parent);
+
+               // other.GetComponent<ChangeTarget>().GenerateThreat(gameObject.GetComponent<Projectile>().parent);
             }
  
         }

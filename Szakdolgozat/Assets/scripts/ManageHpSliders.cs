@@ -33,7 +33,6 @@ public class ManageHpSliders : MonoBehaviour
     {
         sliders[i].SetActive(true);
         sliders[i].transform.Find("PlayerName").GetComponent<TextMeshProUGUI>().SetText(PhotonNetwork.PlayerList[i].NickName);
-        Debug.Log("Set the " + i + ". slider. by: " + PhotonNetwork.PlayerList[i].NickName);
     }
 
 }
